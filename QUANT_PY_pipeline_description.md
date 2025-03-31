@@ -71,6 +71,8 @@ Units/Day,units/week,7.0
 
 ## Phenotype data
 The pipeline imports G&H phenotype data from `/library-red/phenotypes_rawdata/`, that is, from the following sources:
-1. DSA__BartHealth_NHS_Trust: Secondary care data from the Barts Health NHS Trust \[North East London individuals only: ~40,000 individuals with data\]
-2. DSA__BradfordTeachingHospitals_NHSFoundation_Trust: Secondary care data from the Bradford Teaching Hospitals NHS Trust \[\]
-3. 
+1. **DSA__BartHealth_NHS_Trust**: Secondary care data from the Barts Health NHS Trust \[North East London: ~40,000 individuals with data\]
+2. **DSA__BradfordTeachingHospitals_NHSFoundation_Trust**: Secondary care data from the Bradford Teaching Hospitals NHS Trust \[Bradford and environs: ~1,700 individuals with data\]
+3. **DSA__Discovery_7CCGs**: Primary care data from the North East London ICS \[North East London: ~45,000 individuals with data\]
+4. **DSA_NHSDigital**: Data from the National Diabetes Audit (NDA) \[England-wide: ~13,000 individuals with data]
+
