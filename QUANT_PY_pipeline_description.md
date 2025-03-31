@@ -11,7 +11,7 @@ Based on the "Quantitive Traits processing pipeline Jan 2025 redo" `pipeline_jan
 
 ## Summary
 
-The Genes & Health (G&H) `QUANT_PY` pipeline extracts and processes quantitative data from G&H phenotype data.  It creates files and covariate files suitable for `regenie` \[G/Ex\]WAS analysis as well as generic files for each quatitative trait at a per individual level (one row per individual summarising the individuals values for the trait) and a per result level (one line per individual-result).  The pipeline processes HES data to identify admitted patient care (APC) episodes.  From this, three versions of the created files are generated: 1) All data, 2) Out of hospital data (without APC + a buffer), 3) In hospital data (within APC + a  buffer).
+The Genes & Health (G&H) `QUANT_PY` pipeline extracts and processes quantitative data from G&H phenotype data.  It creates files and covariate files suitable for `regenie` \[G/Ex\]WAS analysis as well as generic files for each quatitative trait at a _per individual_ level (one row per individual summarising the individual's values for the trait) and a _per result_ level (one line per individual-result).  The pipeline processes HES data to identify admitted patient care (APC) episodes.  From this, three versions of the created files are generated: 1) All data, 2) Out of hospital data (without APC + a buffer), 3) In hospital data (within APC + a  buffer).
 
 ## Input data
 ### Trait files
@@ -31,4 +31,8 @@ AST,units/L,3.0,1000.0
 Albumin,g/L,10.0,80.0
 Alcohol units per week,units/week,0.0,350.0
 ```
-So, for example, there is a "2h postprandial glucose" trait which is reported in "millimol/L" excluding any value <0.6 millimol/L or over 45.0 millimol/L. 
+So, for example, there is a "2h postprandial glucose" trait which is reported in "millimol/L" excluding any value <0.6 millimol/L or over 45.0 millimol/L.
+
+## Phenotype data
+The pipeline imports G&H phenotype data from `/library-red/phenotypes_rawdata/`, that is, from the following sources:
+1. DSA__BartHealth_NHS_Trust: Secondat care data from the Barts Health NHS Trust
