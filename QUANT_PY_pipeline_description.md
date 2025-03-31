@@ -68,13 +68,13 @@ miu/L,milliunits/L,1.0
 nmol/L,nanomol/L,1.0
 Units/Day,units/week,7.0
 ```
-## Hospital admission data
+### Hospital admission data
 
 `QUANT_PY` uses NHS England Digital Hospital Episode Statistics (HES) APC data to identify periods of hospitalisation --as certain hospital day treatments are logged as APC events (for example immunotherapy infusions), **only APC >2 calendar days are considered as hospitalisation**.  At present, `QUANT_PY` does not exclude data obtained during a A&E episode (HES AE + ECDS) unless this leads to a hospital admission (in which case it is "subsumed" by an APC episode) however, the script is written such that it could be accommodate these if needed/desired.
 
 `QUANT_PY` **extends the hospitalisation episode by a 2-week buffer on either side of the APC event** on the basis that individiual admitted to hospital are typically unwell in the day leading to the hospitalisation and may be discharged recovering but prior to a return to their baseline status.
 
-## Phenotype data
+### Phenotype data
 The pipeline imports G&H phenotype data from `/library-red/phenotypes_rawdata/`, that is, from the following sources:
 1. **DSA__BartHealth_NHS_Trust**: Secondary care data from the Barts Health NHS Trust \[North East London: ~40,000 individuals with data\]
 2. **DSA__BradfordTeachingHospitals_NHSFoundation_Trust**: Secondary care data from the Bradford Teaching Hospitals NHS Trust \[Bradford and environs: ~1,700 individuals with data\]
@@ -83,13 +83,13 @@ The pipeline imports G&H phenotype data from `/library-red/phenotypes_rawdata/`,
 
 All files phenotypes processed are listed in [Appendix A]
 
-### Notes about the processing of qunatitative data
+#### Notes about the processing of qunatitative data
 1. `QUANT_PY` **does not use incremental data generation**. Everytime a release is produced, all current and historically collected data a read in, concatenated and **then** deduplicated.
 2. The aim of all phenotype processing steps is to produce a combined dataframe with the following columns:
 
 | pseudo_nhs_number | test_date | original_term | result | result_value_units | provenance | source | hash |
 |-------------------|-----------|---------------|--------|--------------------|------------|--------|------|
-| 64-char pseudo NHS number | YYYY-MM-DD | free-text term e.g. "Mean Cell Volume" | result (flot64), e.g. 83.8 | unit of result, e.g. "Femtolitre" | file data extracted from e.g. "2023_05_Barts_path" | source ("primary care" or "secondary care" | A hash value used to deduplicte data (unsigned int64) |
+| 64-char pseudo NHS number | YYYY-MM-DD | free-text term e.g. "Mean Cell Volume" | result (flot64), e.g. 83.8 | unit of result, e.g. "Femtolitre" | file(s) data extracted from e.g. "2023_05_Barts_path" | source ("primary care" or "secondary care" | A hash value used to deduplicte data (unsigned int64) |
 
 3. All `QUANT_PY` output files are derived from the above. 
 
@@ -106,6 +106,23 @@ Phenotype data is large in both size and number of files and stored in different
 4. **Strip double-quote**: This can be applied to non comma-delimited data files.  In some such files, double-quotes can appear singly ("), doubly ("") or even triply (""")
 Processed files are listed in [Appendix A]
 
+Per provenance `.arrow` files are prepared at each step.  These can be found in the following directories (with an examplar `.arrow` file listed for each directory:
+* **`.../data/primary_care/arrow/`**: `2024_12_Discover_path.arrow`
+* **`.../data/secondary_care/arrow`**: `2023_05_Bradford_measurements.arrow`
+* **`.../data/secondary_care/nda`**: `2025_04_formatted_nda.arrow`
+
+### STEP 2: Progressively merge files
+
+Files are merged in the following order (with de-duplication after every merge operation).  Again, intermediate file directories and files are listed:
+1. Primary care data + NDA data (primary care data): **`.../data/combined_datasets/`**: `2025_04_Combined_primary_care.arrow`
+2. Barts data + Bradford data (secondary care data): **`.../data/combined_datasets/`**: `2025_04_Combined_secondary_care.arrow`
+
+Finally, primary and secondary care data are merged.  The final output of the multiple merges is considered a key output of the pipeline is available from:
+**`../outputs/`**: `YYYY_MM_Combined_all_sources.arrow`
+
+
+
+### 
 
 # Appendix A  -- List of processed phenotype files
 ```
