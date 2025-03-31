@@ -53,6 +53,21 @@ Platelets,Platelet count (observable entity)
 creatinine,Creatinine Serum
 creatinine,Creatinine level (observable entity)
 ```
+#### _`trait_aliases_long.csv`_
+The same trait may be measured in different units depending of the setting (e.g. primary vs secondary care) or the data source (trust 1 vs trust 2).  This file allows unit concersions to see if a trait in a valid but undesired unit can be converted to a target_unit (as defined in `trait_features.csv`).
+Extract:
+```
+result_value_units,target,multiplication_factor
+%,%,1.0
+*10^9/l,10^9/L,1.0
+g/L,mg/L,1000.0
+IU/L,units/L,1.0
+Kg,grams,1000.0
+mg/L,g/L,0.001
+miu/L,milliunits/L,1.0
+nmol/L,nanomol/L,1.0
+Units/Day,units/week,7.0
+```
 
 ## Phenotype data
 The pipeline imports G&H phenotype data from `/library-red/phenotypes_rawdata/`, that is, from the following sources:
