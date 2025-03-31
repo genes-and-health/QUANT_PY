@@ -76,3 +76,17 @@ The pipeline imports G&H phenotype data from `/library-red/phenotypes_rawdata/`,
 3. **DSA__Discovery_7CCGs**: Primary care data from the North East London ICS \[North East London: ~45,000 individuals with data\]
 4. **DSA_NHSDigital**: Data from the National Diabetes Audit (NDA) \[England-wide: ~13,000 individuals with data]
 
+### Notes about the processing of qunatitative data
+1. `QUANT_PY` **does not use incremental data generation**. Everytime a release is produced, all current and historically collected data a read in, concatenated and **then** deduplicated.
+2. The aim of all phenotype processing steps is to produce a combined dataframe with the following columns:
+| pseduo_nhs_number | test_date | result | result_value_units | provenance | source | hash |
+|-------------------|-----------|--------|--------------------|------------|--------|------|
+4.  
+5. 
+## Pipeline steps
+It is advisable to run the pipeline on a VM with lots of memory, typically an `n2d-highmem` 32 processor VM with 256Gb memory.
+### STEP 0: Transfer phenotype data to `ivm`
+Phenotype data is large in both size and number of files and stored in different direcotries at different directory depth.  Buffering issues affect processing of data directly from the `/library-red/` Google Cloud bucket.  It is therefore simpler to copy all phenotype file to the `ivm` running `QUANT_PY`.  This transfer can be effected within the pipeline by setting a pipeline flag.
+
+### STEP 1: Importing primary care data
+For the purposes of `QUANT_PY`, National Diabetes Audit (NDA) data are considered primary care data (in pracice they are derived from both primary and secondary care records).  
