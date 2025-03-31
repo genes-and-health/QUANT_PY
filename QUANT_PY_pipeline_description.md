@@ -68,6 +68,11 @@ miu/L,milliunits/L,1.0
 nmol/L,nanomol/L,1.0
 Units/Day,units/week,7.0
 ```
+## Hospital admission data
+
+`QUANT_PY` uses NHS England Digital Hospital Episode Statistics (HES) APC data to identify periods of hospitalisation --as certain hospital day treatments are logged as APC events (for example immunotherapy infusions), **only APC >2 calendar days are considered as hospitalisation**.  At present, `QUANT_PY` does not exclude data obtained during a A&E episode (HES AE + ECDS) unless this leads to a hospital admission (in which case it is "subsumed" by an APC episode) however, the script is written such that it could be accommodate these if needed/desired.
+
+`QUANT_PY` **extends the hospitalisation episode by a 2-week buffer on either side of the APC event** on the basis that individiual admitted to hospital are typically unwell in the day leading to the hospitalisation and may be discharged recovering but prior to a return to their baseline status.
 
 ## Phenotype data
 The pipeline imports G&H phenotype data from `/library-red/phenotypes_rawdata/`, that is, from the following sources:
@@ -79,10 +84,13 @@ The pipeline imports G&H phenotype data from `/library-red/phenotypes_rawdata/`,
 ### Notes about the processing of qunatitative data
 1. `QUANT_PY` **does not use incremental data generation**. Everytime a release is produced, all current and historically collected data a read in, concatenated and **then** deduplicated.
 2. The aim of all phenotype processing steps is to produce a combined dataframe with the following columns:
-| pseduo_nhs_number | test_date | result | result_value_units | provenance | source | hash |
-|-------------------|-----------|--------|--------------------|------------|--------|------|
-4.  
-5. 
+
+| pseudo_nhs_number | test_date | original_term | result | result_value_units | provenance | source | hash |
+|-------------------|-----------|---------------|--------|--------------------|------------|--------|------|
+| 64-char pseudo NHS number | YYYY-MM-DD | free-text term e.g. "Mean Cell Volume" | result (flot64), e.g. 83.8 | unit of result, e.g. "Femtolitre" | file data extracted from e.g. "2023_05_Barts_path" | source ("primary care" or "secondary care" | A hash value used to deduplicte data (unsigned int64)|
+
+3. All `QUANT_PY` output files are derived from the above. 
+
 ## Pipeline steps
 It is advisable to run the pipeline on a VM with lots of memory, typically an `n2d-highmem` 32 processor VM with 256Gb memory.
 ### STEP 0: Transfer phenotype data to `ivm`
