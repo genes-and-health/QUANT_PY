@@ -81,6 +81,8 @@ The pipeline imports G&H phenotype data from `/library-red/phenotypes_rawdata/`,
 3. **DSA__Discovery_7CCGs**: Primary care data from the North East London ICS \[North East London: ~45,000 individuals with data\]
 4. **DSA_NHSDigital**: Data from the National Diabetes Audit (NDA) \[England-wide: ~13,000 individuals with data]
 
+All files phenotypes processed are listed in [Appendix A]
+
 ### Notes about the processing of qunatitative data
 1. `QUANT_PY` **does not use incremental data generation**. Everytime a release is produced, all current and historically collected data a read in, concatenated and **then** deduplicated.
 2. The aim of all phenotype processing steps is to produce a combined dataframe with the following columns:
@@ -97,4 +99,67 @@ It is advisable to run the pipeline on a VM with lots of memory, typically an `n
 Phenotype data is large in both size and number of files and stored in different direcotries at different directory depth.  Buffering issues affect processing of data directly from the `/library-red/` Google Cloud bucket.  It is therefore simpler to copy all phenotype file to the `ivm` running `QUANT_PY`.  This transfer can be effected within the pipeline by setting a pipeline flag.
 
 ### STEP 1: Importing primary care data
-For the purposes of `QUANT_PY`, National Diabetes Audit (NDA) data are considered primary care data (in pracice they are derived from both primary and secondary care records).  
+For the purposes of `QUANT_PY`, National Diabetes Audit (NDA) data are considered primary care data (in pracice, NDA data are derived from both primary and secondary care records).
+
+# Appendix A  -- List of processed phenotype files
+```
+# Primary care
+.../DSA_Discovery_7CCGs/2022_04_Discovery/GNH_thw/nech-phase2-outfiles_merge/GNH_thw/nech_observations_output_dataset_20220423.csv
+.../DSA_Discovery_7CCGs/2022_04_Discovery/GNH_bhr-phase2-outfiles_merge/GNH_bhr_observations_output_dataset_20220412.csv
+.../DSA_Discovery_7CCGs/2022_12_Discovery/GNH_thw/nech-phase2-outfiles_merge/gh2_observations_output_dataset_20221207.csv
+.../DSA_Discovery_7CCGs/2022_12_Discovery/GNH_bhr-phase2-outfiles_merge/gh2_observations_dataset_20221207.csv
+.../DSA_Discovery_7CCGs/2023_04_Discovery/gh3_observations.csv
+.../DSA_Discovery_7CCGs/2023_11_Discovery/gh3_observations.csv
+.../DSA_Discovery_7CCGs/2024_04_Discovery/gh3_observations.csv
+.../DSA_Discovery_7CCGs/2024_12_Discovery/gh3_observations.csv
+
+# NDA
+.../DSA_NHSDigitalNHSEngland/2024_10/NDA/NIC338864_NDA_BMI.txt
+.../DSA_NHSDigitalNHSEngland/2024_10/NDA/NIC338864_NDA_CHOL.txt
+.../DSA_NHSDigitalNHSEngland/2024_10/NDA/NIC338864_NDA_HBA1C.txt
+.../DSA_NHSDigitalNHSEngland/2024_10/NDA/NIC338864_NDA_BP.txt
+
+# Secondary care -- Bradford
+.../DSA_BradfordTeachingHospitals_NHSFoundation_Trust/2023_05_BTHFT/1578_gh_lab_results_2023-06-09_noCR.ascii.redacted.tab
+.../DSA_BradfordTeachingHospitals_NHSFoundation_Trust/2024_12_BTHFT/1578_gh_lab_results_2024-12-05.ascii.redacted.tab
+.../DSA_BradfordTeachingHospitals_NHSFoundation_Trust/2022_06_BTHFT/1578_gh_cerner_measurements_2022-06-10_redacted.tsv
+.../DSA_BradfordTeachingHospitals_NHSFoundation_Trust/2024_12_BTHFT/1578_gh_cerner_measurements_2024-12-05.ascii.redacted.tab
+
+# Secondary care -- Barts
+.../DSA_BartsHealth_NHS_Trust/2021_04_PathologyLab/Candida_April2021.csv
+.../DSA_BartsHealth_NHS_Trust/2021_04_PathologyLab/SHBG_April2021.csv
+.../DSA_BartsHealth_NHS_Trust/2021_04_PathologyLab/Fasting_Glucose.csv
+.../DSA_BartsHealth_NHS_Trust/2021_04_PathologyLab/WhiteBloodCellCount_April2021.csv
+.../DSA_BartsHealth_NHS_Trust/2021_04_PathologyLab/Monocytes_April2021.csv
+.../DSA_BartsHealth_NHS_Trust/2021_04_PathologyLab/Basophil_April2021.csv
+.../DSA_BartsHealth_NHS_Trust/2021_04_PathologyLab/HDL_April2021.csv
+.../DSA_BartsHealth_NHS_Trust/2021_04_PathologyLab/DHEA_April2021.csv
+.../DSA_BartsHealth_NHS_Trust/2021_04_PathologyLab/Random_Glucose.csv
+.../DSA_BartsHealth_NHS_Trust/2021_04_PathologyLab/TotalCholesterol_April2021.csv
+.../DSA_BartsHealth_NHS_Trust/2021_04_PathologyLab/Insulin_Antibodies.csv
+.../DSA_BartsHealth_NHS_Trust/2021_04_PathologyLab/BileAcidSerum_April2021.csv
+.../DSA_BartsHealth_NHS_Trust/2021_04_PathologyLab/ApolipoproteinB100_April2021.csv
+.../DSA_BartsHealth_NHS_Trust/2021_04_PathologyLab/TriglycerideSerum_April2021.csv
+.../DSA_BartsHealth_NHS_Trust/2021_04_PathologyLab/Testosterone_April2021.csv
+.../DSA_BartsHealth_NHS_Trust/2021_04_PathologyLab/RBC_April2021.csv
+.../DSA_BartsHealth_NHS_Trust/2021_04_PathologyLab/Lymphocytes_April2021.csv
+.../DSA_BartsHealth_NHS_Trust/2021_04_PathologyLab/Eosinophil_April2021.csv
+.../DSA_BartsHealth_NHS_Trust/2021_04_PathologyLab/MCV_April2021.csv
+.../DSA_BartsHealth_NHS_Trust/2021_04_PathologyLab/LDL_April2021.csv
+.../DSA_BartsHealth_NHS_Trust/2021_04_PathologyLab/ApolipoproteinA1_April2021.csv
+.../DSA_BartsHealth_NHS_Trust/2021_04_PathologyLab/Neutrophils_April2021.csv
+.../DSA_BartsHealth_NHS_Trust/2021_04_PathologyLab/Haematocrit_April2021.csv
+.../DSA_BartsHealth_NHS_Trust/2021_04_PathologyLab/MCHC_April2021.csv
+.../DSA_BartsHealth_NHS_Trust/2021_04_PathologyLab/Platelet_April2021.csv
+.../DSA_BartsHealth_NHS_Trust/2021_04_PathologyLab/Oestradiol_April2021.csv
+.../DSA_BartsHealth_NHS_Trust/2021_04_PathologyLab/GAD_Antibodies.csv
+.../DSA_BartsHealth_NHS_Trust/2021_04_PathologyLab/HbA1c_April2021.csv
+.../DSA_BartsHealth_NHS_Trust/2021_04_PathologyLab/Prolactin_April2021.csv
+.../DSA_BartsHealth_NHS_Trust/2022_03_ResearchDatasetv1.5/GH_Pathology_20220319T143_redacted_noHistopathologyReport.csv
+.../DSA_BartsHealth_NHS_Trust/2023_05_ResearchDatasetv1.5/GH_Pathology_20230517T061.ascii_redacted.nohisto.tab
+.../DSA_BartsHealth_NHS_Trust/2023_12_ResearchDatasetv1.6/GH_Pathology_20231218.ascii.nohisto.redacted2.tab
+.../DSA_BartsHealth_NHS_Trust/2024_09_ResearchDataset/RDE_Pathology_ascii.nohisto.redacted2.csv
+.../DSA_BartsHealth_NHS_Trust/2023_05_ResearchDatasetv1.5/GandH_Measurements_20230512T304.ascii.redacted.tab
+.../DSA_BartsHealth_NHS_Trust/2023_12_ResearchDatasetv1.6/GandH_Measurements_20240423.ascii.redacted2.tab
+.../DSA_BartsHealth_NHS_Trust/2024_09_ResearchDataset/RDE_Measurements.ascii.redacted2.tab
+```
