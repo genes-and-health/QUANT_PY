@@ -16,10 +16,10 @@ The Genes & Health (G&H) `QUANT_PY` pipeline extracts and processes quantitative
 ## Input data
 ### Trait files
 The pipeline requires 3 trait input files: 1. `trait_features.csv`, 2. `trait_aliases_long.csv`, 3. `unit_conversions.csv`.
-#### _`trait_features.csv`_
 
+#### _`trait_features.csv`_
 This file lists all the quantitative traits currently extracted from the phenotype data.  The .csv file has 4 columns: trait,target_units,min,max.
-Here is an extract:
+Extract:
 ```
 trait,target_units,min,max
 2h postprandial glucose,millimol/L,0.6,45.0
@@ -31,7 +31,28 @@ AST,units/L,3.0,1000.0
 Albumin,g/L,10.0,80.0
 Alcohol units per week,units/week,0.0,350.0
 ```
-So, for example, there is a "2h postprandial glucose" trait which is reported in "millimol/L" excluding any value <0.6 millimol/L or over 45.0 millimol/L.
+So, for example, there is a "2h postprandial glucose" trait which is reported in "millimol/L", excluding any value less than 0.6 millimol/L or over 45.0 millimol/L.
+
+#### _`trait_aliases_long.csv`_
+SNOMED codes are missing for some of the G&H data pulls, this means that quantitative trait extraction is based on free-text trait descriptions (aka `original_term` within the script).  This file assigns all valid trait descriptions (aliases) to a trait.
+Extract:
+```
+trait,alias
+2h_postprandial_glucose,2h postprandial glucose
+2h_postprandial_glucose,"Glucose tolerance test, 2 hour post prandial (procedure)"
+...
+Alcohol_units_per_week,Alcohol units per week
+Alcohol_units_per_week,Alcohol units/week (qualifier value)
+...
+Blood_ketones,Blood ketone level (observable entity)
+Blood_ketones,POCT Blood Ketones
+...
+Platelets,Platelet count
+Platelets,Platelet count (observable entity)
+...
+creatinine,Creatinine Serum
+creatinine,Creatinine level (observable entity)
+```
 
 ## Phenotype data
 The pipeline imports G&H phenotype data from `/library-red/phenotypes_rawdata/`, that is, from the following sources:
