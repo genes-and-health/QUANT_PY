@@ -117,10 +117,11 @@ Files are merged in the following order (with de-duplication after every merge o
 1. Primary care data + NDA data (primary care data): **`.../data/combined_datasets/`**: `2025_04_Combined_primary_care.arrow`
 2. Barts data + Bradford data (secondary care data): **`.../data/combined_datasets/`**: `2025_04_Combined_secondary_care.arrow`
 
-Finally, primary and secondary care data are merged.  The final output of the multiple merges is considered a key output of the pipeline is available from:
-**`../outputs/`**: `YYYY_MM_Combined_all_sources.arrow`
+Finally, primary and secondary care data are merged.
 
-
+> [!TIP]
+> The final output of the multiple merges is considered a key output of the pipeline is available from:
+>  **`../outputs/`**: `YYYY_MM_Combined_all_sources.arrow`
 
 ### 
 
