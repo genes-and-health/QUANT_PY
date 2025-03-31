@@ -5,4 +5,5 @@
 * Stuart Rison
 * Mike Samuels
 
+![G&H Team Data logo](/GNH TD Logon.png)
 
