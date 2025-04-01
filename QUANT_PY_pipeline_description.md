@@ -2,6 +2,22 @@
 
 <img src="GNH%20TD%20Logo.png" alt="G&H Team Data logo" width=25%>
 
+<details>
+
+<summary>Tips for collapsed sections</summary>
+
+### You can add a header
+
+You can add text within a collapsed section.
+
+You can add an image or a code block, too.
+
+```ruby
+   puts "Hello World"
+```
+
+</details>
+
 ## Authors
 
 * Stuart Rison
