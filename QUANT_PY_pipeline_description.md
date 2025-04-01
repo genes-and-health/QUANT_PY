@@ -81,12 +81,12 @@ The pipeline imports G&H phenotype data from `/library-red/phenotypes_rawdata/`,
 All files phenotypes processed are listed in [Appendix A](#appendix-a-list-of-processed-phenotype-files)
 
 #### Notes about the processing of qunatitative data
-1. `QUANT_PY` **does not use incremental data generation**. Everytime a release is produced, all current and historically collected data a read in, concatenated and **then** deduplicated.
+1. `QUANT_PY` **does not use incremental data generation**. Everytime a release is produced, all current and historically collected data are read in, concatenated and **then** deduplicated.
 2. The aim of all phenotype processing steps is to produce a combined dataframe with the following columns:
 
 | pseudo_nhs_number | test_date | original_term | result | result_value_units | provenance | source | hash |
 |-------------------|-----------|---------------|--------|--------------------|------------|--------|------|
-| 64-char pseudo NHS number | YYYY-MM-DD | free-text term e.g. "Mean Cell Volume" | result (flot64), e.g. 83.8 | unit of result, e.g. "Femtolitre" | file(s) data extracted from e.g. "2023_05_Barts_path" | source ("primary care" or "secondary care" | A hash value used to deduplicte data (unsigned int64) |
+| 64-char pseudo NHS number | YYYY-MM-DD | free-text term e.g. "Mean Cell Volume" | result (flot64), e.g. 83.8 | unit of result, e.g. "Femtolitre" | file(s) data extracted from e.g. "2023_05_Barts_path" | source ("primary care" or "secondary care" | A hash value used to deduplicate data (unsigned int64) |
 
 3. All `QUANT_PY` output files are derived from the above. 
 
@@ -101,8 +101,11 @@ Phenotype data is large in both size and number of files and stored in different
 2. **Exclude "unterminated" double-quotes**: Some rows include a double-quote not paired with a second double-quote before the next separator.  In such cases, the importing functions often "glob" all text in subsequent rows until another double-quote is found.  Therefore these rows are excluded.
 3. **Excluded rows with non-standard number of fields**: some rows may have additional/fewer separators either intentionally or erroneously creating additional/deleting fields.  `QUANT_PY` rejects any lines with a non-standard number of separators.
 4. **Strip double-quote**: This can be applied to non comma-delimited data files.  In some such files, double-quotes can appear singly ("), doubly ("") or even triply (""")
-Processed files are listed in [Appendix A](#Appendix_A__--_List_of_processed_phenotype_files)  [Appendix A](#NDA)
 
+Processed files are listed in [Appendix A](#Appendix_A__--_List_of_processed_phenotype_files)
+
+#### Intermediary `.arrow` files
+These can be useful for debugging purposes or for researchers interested in phenotypic data from a specific source.
 
 Per provenance `.arrow` files are prepared at each step.  These can be found in the following directories (with an examplar `.arrow` file listed for each directory:
 * **`.../data/primary_care/arrow/`**: `2024_12_Discover_path.arrow`
@@ -111,17 +114,38 @@ Per provenance `.arrow` files are prepared at each step.  These can be found in 
 
 ### STEP 2: Progressively merge files
 
-Files are merged in the following order (with de-duplication after every merge operation).  Again, intermediate file directories and files are listed:
-1. Primary care data + NDA data (primary care data): **`.../data/combined_datasets/`**: `2025_04_Combined_primary_care.arrow`
-2. Barts data + Bradford data (secondary care data): **`.../data/combined_datasets/`**: `2025_04_Combined_secondary_care.arrow`
+Files are merged in the following order (with de-duplication after every merge operation).  Again, intermediate file directories are available as isted:
+1. Primary care data + NDA data (primary care data): **`.../data/combined_datasets/`**: `YYYY_MM_Combined_primary_care.arrow`
+2. Barts data + Bradford data (secondary care data): **`.../data/combined_datasets/`**: `YYYY_MM_Combined_secondary_care.arrow`
 
 Finally, primary and secondary care data are merged.
 
 > [!TIP]
-> The final output of the multiple merges is considered a key output of the pipeline is available from:
+> The final output of the multiple merges is considered a key output of the pipeline and is there stored in the **`.../outputs/`** directory:
+> 
 >  **`../outputs/`**: `YYYY_MM_Combined_all_sources.arrow`
+>
+> The dataframe is referred to as the **COMBO**.
 
-### 
+On 2025-04-01, the `2025_04_Combined_all_sources.arrow` was `78,582,474` rows long.
+
+### STEP 3: Add hospitalisation status column
+
+Admitted Patient Care episodes are extracted from HES data pulls of 2021-09, 2023-07, 2024-10, and 2025-03.  These data defined three APC `region_types`:
+* APC: a date span for the APC
+* buffer_before: a date span of 14d prior to addmission date
+* buffer_after: a date span of 14d after discharge date
+
+By extension, a test result dates can be classifed in one to the following (some non-mutually exclusive) categories:
+* **IN_APC_ONLY**: test results collected in an actual hospitalisation episode
+* **IN_BUFFER_BEFORE**: test results collected within the 14d prior to a hospitalisation episode
+* **IN_BUFFER_AFTER**: test results collected within the 14d following a hospitalisation episode
+* **IN_BUFFER_ANY**: test results collected _either_ within the 14d prior to, or following, a hospitalisation episode _but_ not during the actual hospitalisation period
+* **IN_TOTAL_EXCLUSION_ZONE**: test results collected within a period from 14 days prior to a hospitalisation episode to 14 days following a hospitalisation episode _including_ the hospitalisation period
+* **OUT_OF_APC**: test results collected outside of a hospitalisation episode
+* **OUT_OF_TOTAL_EXCLUSION_ZONE**: test results collected outside of any buffered hospitalisation episode (hospitalisation episode + 14 days either side)   
+
+
 
 # Appendix A: List of processed phenotype files
 ```
