@@ -101,7 +101,8 @@ Phenotype data is large in both size and number of files and stored in different
 2. **Exclude "unterminated" double-quotes**: Some rows include a double-quote not paired with a second double-quote before the next separator.  In such cases, the importing functions often "glob" all text in subsequent rows until another double-quote is found.  Therefore these rows are excluded.
 3. **Excluded rows with non-standard number of fields**: some rows may have additional/fewer separators either intentionally or erroneously creating additional/deleting fields.  `QUANT_PY` rejects any lines with a non-standard number of separators.
 4. **Strip double-quote**: This can be applied to non comma-delimited data files.  In some such files, double-quotes can appear singly ("), doubly ("") or even triply (""")
-Processed files are listed in [Appendix A](#Appendix_A__--_List_of_processed_phenotype_files)
+Processed files are listed in [Appendix A](#Appendix_A__--_List_of_processed_phenotype_files)  [Appendix A](#NDA)
+
 
 Per provenance `.arrow` files are prepared at each step.  These can be found in the following directories (with an examplar `.arrow` file listed for each directory:
 * **`.../data/primary_care/arrow/`**: `2024_12_Discover_path.arrow`
