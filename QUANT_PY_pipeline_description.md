@@ -62,9 +62,14 @@ creatinine,Creatinine level (observable entity)
 ```
 
 </details>
+
 #### _`trait_aliases_long.csv`_
 The same trait may be measured in different units depending of the setting (e.g. primary vs secondary care) or the data source (trust 1 vs trust 2).  This file allows unit conversions if a trait in a valid but undesired unit can be converted to a target_unit (as defined in `trait_features.csv`).  It also acts a a synonym dictionary to standardise unit terminology, for example, `nmol/L` is converted into the preferred term `nanomol/L`. Such conversions can be identified by a `multiplication_factor` of 0.0. 
-Extract:
+
+<details>
+   
+<summary>Extract</summary>
+  
 ```
 result_value_units,target,multiplication_factor
 %,%,1.0
@@ -77,6 +82,8 @@ miu/L,milliunits/L,1.0
 nmol/L,nanomol/L,1.0
 Units/Day,units/week,7.0
 ```
+</details>
+
 ### Hospital admission data
 
 `QUANT_PY` uses NHS England Digital Hospital Episode Statistics (HES) Admitted Patient Care (APC) data to identify periods of hospitalisation --as certain hospital day treatments are logged as APC events (e.g. immunotherapy infusions), **only APC episodes >2 calendar days are considered as hospitalisation**.  At present, `QUANT_PY` does not exclude data obtained during a A&E episode (HES AE + ECDS) unless this leads to a hospital admission (in which case it is "subsumed" by an APC episode).  However, the script is written such that it could be accommodate these if needed/desired.
