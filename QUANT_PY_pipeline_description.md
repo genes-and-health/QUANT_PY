@@ -2,22 +2,6 @@
 
 <img src="GNH%20TD%20Logo.png" alt="G&H Team Data logo" width=25%>
 
-<details>
-
-<summary>Tips for collapsed sections</summary>
-
-### You can add a header
-
-You can add text within a collapsed section.
-
-You can add an image or a code block, too.
-
-```ruby
-   puts "Hello World"
-```
-
-</details>
-
 ## Authors
 
 * Stuart Rison
@@ -38,18 +22,19 @@ This file lists all the quantitative traits currently extracted from the phenoty
 
 <details>
    
-  <summary>Extract</summary>
+<summary>Extract</summary>
   
-  ```trait,target_units,min,max
-     2h postprandial glucose,millimol/L,0.6,45.0
-     AFP,kU/L,1e-100,10000.0
-     ALP,units/L,8.0,1500.0
-     ALT,units/L,5.0,1500.0
-     APTT,seconds,1e-100,100.0
-     AST,units/L,3.0,1000.0
-     Albumin,g/L,10.0,80.0
-     Alcohol units per week,units/week,0.0,350.0
-  ```
+```
+trait,target_units,min,max
+2h postprandial glucose,millimol/L,0.6,45.0
+AFP,kU/L,1e-100,10000.0
+ALP,units/L,8.0,1500.0
+ALT,units/L,5.0,1500.0
+APTT,seconds,1e-100,100.0
+AST,units/L,3.0,1000.0
+Albumin,g/L,10.0,80.0
+Alcohol units per week,units/week,0.0,350.0
+```
 
 </details>
 So, for example, there is a "2h postprandial glucose" trait which is reported in "millimol/L", excluding any value less than 0.6 millimol/L or over 45.0 millimol/L.
