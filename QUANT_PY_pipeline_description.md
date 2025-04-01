@@ -78,7 +78,7 @@ The pipeline imports G&H phenotype data from `/library-red/phenotypes_rawdata/`,
 3. **DSA__Discovery_7CCGs**: Primary care data from the North East London ICS \[North East London: ~45,000 individuals with data\]
 4. **DSA_NHSDigital**: Data from the National Diabetes Audit (NDA) \[England-wide: ~13,000 individuals with data]
 
-All files phenotypes processed are listed in [Appendix A]
+All files phenotypes processed are listed in [Appendix A](#Appendix_A__--_List_of_processed_phenotype_files)
 
 #### Notes about the processing of qunatitative data
 1. `QUANT_PY` **does not use incremental data generation**. Everytime a release is produced, all current and historically collected data a read in, concatenated and **then** deduplicated.
