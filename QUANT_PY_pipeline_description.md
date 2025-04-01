@@ -41,7 +41,11 @@ So, for example, there is a "2h postprandial glucose" trait which is reported in
 
 #### _`trait_aliases_long.csv`_
 SNOMED codes are missing for some of the G&H data pulls, this means that quantitative trait extraction is based on free-text trait descriptions (aka `original_term` within the script).  This file assigns all valid trait descriptions (aliases) to a trait.
-Extract:
+
+<details>
+   
+<summary>Extract</summary>
+  
 ```
 trait,alias
 2h_postprandial_glucose,2h postprandial glucose
@@ -56,6 +60,8 @@ Blood_ketones,POCT Blood Ketones
 creatinine,Creatinine Serum
 creatinine,Creatinine level (observable entity)
 ```
+
+</details>
 #### _`trait_aliases_long.csv`_
 The same trait may be measured in different units depending of the setting (e.g. primary vs secondary care) or the data source (trust 1 vs trust 2).  This file allows unit conversions if a trait in a valid but undesired unit can be converted to a target_unit (as defined in `trait_features.csv`).  It also acts a a synonym dictionary to standardise unit terminology, for example, `nmol/L` is converted into the preferred term `nanomol/L`. Such conversions can be identified by a `multiplication_factor` of 0.0. 
 Extract:
