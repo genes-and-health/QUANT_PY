@@ -47,14 +47,11 @@ Alcohol_units_per_week,Alcohol units/week (qualifier value)
 Blood_ketones,Blood ketone level (observable entity)
 Blood_ketones,POCT Blood Ketones
 ...
-Platelets,Platelet count
-Platelets,Platelet count (observable entity)
-...
 creatinine,Creatinine Serum
 creatinine,Creatinine level (observable entity)
 ```
 #### _`trait_aliases_long.csv`_
-The same trait may be measured in different units depending of the setting (e.g. primary vs secondary care) or the data source (trust 1 vs trust 2).  This file allows unit concersions to see if a trait in a valid but undesired unit can be converted to a target_unit (as defined in `trait_features.csv`).
+The same trait may be measured in different units depending of the setting (e.g. primary vs secondary care) or the data source (trust 1 vs trust 2).  This file allows unit conversions if a trait in a valid but undesired unit can be converted to a target_unit (as defined in `trait_features.csv`).  It also acts a a synonym dictionary to standardise unit terminology, for example, `nmol/L` is converted into the preferred term `nanomol/L`. Such conversions can be identified by a `multiplication_factor` of 0.0. 
 Extract:
 ```
 result_value_units,target,multiplication_factor
@@ -70,9 +67,9 @@ Units/Day,units/week,7.0
 ```
 ### Hospital admission data
 
-`QUANT_PY` uses NHS England Digital Hospital Episode Statistics (HES) APC data to identify periods of hospitalisation --as certain hospital day treatments are logged as APC events (for example immunotherapy infusions), **only APC >2 calendar days are considered as hospitalisation**.  At present, `QUANT_PY` does not exclude data obtained during a A&E episode (HES AE + ECDS) unless this leads to a hospital admission (in which case it is "subsumed" by an APC episode) however, the script is written such that it could be accommodate these if needed/desired.
+`QUANT_PY` uses NHS England Digital Hospital Episode Statistics (HES) Admitted Patient Care (APC) data to identify periods of hospitalisation --as certain hospital day treatments are logged as APC events (e.g. immunotherapy infusions), **only APC episodes >2 calendar days are considered as hospitalisation**.  At present, `QUANT_PY` does not exclude data obtained during a A&E episode (HES AE + ECDS) unless this leads to a hospital admission (in which case it is "subsumed" by an APC episode).  However, the script is written such that it could be accommodate these if needed/desired.
 
-`QUANT_PY` **extends the hospitalisation episode by a 2-week buffer on either side of the APC event** on the basis that individiual admitted to hospital are typically unwell in the day leading to the hospitalisation and may be discharged recovering but prior to a return to their baseline status.
+`QUANT_PY` **extends the hospitalisation episode by a 2-week buffer on either side of the APC event** on the basis that individiuals admitted to hospital are typically unwell in the days leading to hospitalisation and may be discharged recovering, but prior to a return to their baseline status.
 
 ### Phenotype data
 The pipeline imports G&H phenotype data from `/library-red/phenotypes_rawdata/`, that is, from the following sources:
@@ -104,7 +101,7 @@ Phenotype data is large in both size and number of files and stored in different
 2. **Exclude "unterminated" double-quotes**: Some rows include a double-quote not paired with a second double-quote before the next separator.  In such cases, the importing functions often "glob" all text in subsequent rows until another double-quote is found.  Therefore these rows are excluded.
 3. **Excluded rows with non-standard number of fields**: some rows may have additional/fewer separators either intentionally or erroneously creating additional/deleting fields.  `QUANT_PY` rejects any lines with a non-standard number of separators.
 4. **Strip double-quote**: This can be applied to non comma-delimited data files.  In some such files, double-quotes can appear singly ("), doubly ("") or even triply (""")
-Processed files are listed in [Appendix A]
+Processed files are listed in [Appendix A](#Appendix_A__--_List_of_processed_phenotype_files)
 
 Per provenance `.arrow` files are prepared at each step.  These can be found in the following directories (with an examplar `.arrow` file listed for each directory:
 * **`.../data/primary_care/arrow/`**: `2024_12_Discover_path.arrow`
