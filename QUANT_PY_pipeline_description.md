@@ -168,7 +168,7 @@ Admitted Patient Care episodes are extracted from HES data pulls of 2021-09, 202
 * buffer_before: a date span of 14d prior to addmission date
 * buffer_after: a date span of 14d after discharge date
 
-**COMBO** test results are flagged to one of the above by joining the APC data to **COMBO**.
+**COMBO** test results are flagged to none (`null`), one or more of the above by joining the APC data to **COMBO**.  For example, a date may exists within and APC period (flagged as `\["APC"\]`), or within an APC and a buffer_before (for example if the date falls both within an APC and within the buffer_before of the subsequent APC; flagged as \["APC", "buffer_before"\]).
 
 By extension, test result dates can be classifed in one of 7 (some non-mutually exclusive) categories.
 
