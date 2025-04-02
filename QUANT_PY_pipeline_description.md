@@ -188,12 +188,27 @@ By extension, test result dates can be classifed in one of 7 (some non-mutually 
 ### STEP 4: Perform unit conversions and exclude out of range results
 
 COMBO is joined to a denormalised traits dataframe (`traits_features` x `trait_aliases`) which identifies COMBO row with traits to extract, their target units and their valid range.  Unit conversions are performed where possible and applicable and final results are flagged as:
-* *below_min*: result lower than the minimum value set for this trait.  These will subsequently be excluded.
-* *ok": result within valid range for this trait.
-* "above_max": result higher than the maximum value set for this trait.  These will subsequently be excluded.
+* **below_min**: result lower than the minimum value set for this trait.  These will subsequently be excluded.
+* **ok**: result within valid range for this trait.
+* **above_max**: result higher than the maximum value set for this trait.  These will subsequently be excluded.
 
 ### Step 5: COMBO restricted to valid pseudoNHS numbers and valid demographics
 
+#### Filter to valid pseudoNHS number
+There are approximately 1,000 rows excluded by this pseudoNHS validation.
+Possible reasons:
+
+1. subject asked to be removed/withdrawn
+2. subject died
+3. subject had multiple pseudoNHS which have been merged
+
+Import mega_linkage file ᵀᴹ
+Restrict data to pseudoNHS in mega_linkage file ᵀᴹ
+Use mega_linkage file ᵀᴹ to link to S1QST for DOB
+
+...and filter to valid pseudoNHS
+
+In quant_py, we now use the DvH's 2025_02_10_MegaLinkage_forTRE.csv ᵀᴹ
 
 # Appendix A: List of processed phenotype files
 ```
