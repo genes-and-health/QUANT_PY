@@ -112,7 +112,11 @@ All files phenotypes processed are listed in [Appendix A](#appendix-a-list-of-pr
 ## Pipeline steps
 It is advisable to run the pipeline on a VM with lots of memory, typically an `n2d-highmem` 32 processor VM with 256Gb memory.
 
-All intermediary files are available in [`.arrow` format](https://arrow.apache.org/overview/){:target="_blank"}
+> [!TIP]
+> All intermediary files are available in [`.arrow` format](https://arrow.apache.org/overview/)
+>
+> _(This link does not automatically open in a new window. Use CTRL+click (on Windows and Linux) or CMD+click (on MacOS) to open the link in a new window)_
+> 
 
 ### STEP 0: Transfer phenotype data to `ivm`
 Phenotype data is large in both size and number of files and stored in different direcotries at different directory depth.  Buffering issues affect processing of data directly from the `/library-red/` Google Cloud bucket.  It is therefore simpler to copy all phenotype file to the `ivm` running `QUANT_PY`.  This transfer can be effected within the pipeline by setting a pipeline flag.
@@ -155,7 +159,7 @@ Finally, primary and secondary care data are merged.
 >
 > The dataframe is referred to as the **COMBO**.
 
-On 2025-04-01, the `2025_04_Combined_all_sources.arrow` was `78,582,474` rows long.
+On 2025-04-01, the **COMBO** `2025_04_Combined_all_sources.arrow` was `78,582,474` rows long.
 
 ### STEP 3: Add hospitalisation status column
 
