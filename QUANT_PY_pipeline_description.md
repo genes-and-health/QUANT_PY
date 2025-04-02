@@ -168,16 +168,22 @@ Admitted Patient Care episodes are extracted from HES data pulls of 2021-09, 202
 * buffer_before: a date span of 14d prior to addmission date
 * buffer_after: a date span of 14d after discharge date
 
-COMBO test results are flagged to one of the above by joining the APC data to COMBO.
+**COMBO** test results are flagged to one of the above by joining the APC data to **COMBO**.
 
-By extension, a test result dates can be classifed in one to the following (some non-mutually exclusive) categories:
-* **IN_APC_ONLY**: test results collected in an actual hospitalisation episode
-* **IN_BUFFER_BEFORE**: test results collected within the 14d prior to a hospitalisation episode
-* **IN_BUFFER_AFTER**: test results collected within the 14d following a hospitalisation episode
-* **IN_BUFFER_ANY**: test results collected _either_ within the 14d prior to, or following, a hospitalisation episode _but_ not during the actual hospitalisation period
-* **IN_TOTAL_EXCLUSION_ZONE**: test results collected within a period from 14 days prior to a hospitalisation episode to 14 days following a hospitalisation episode _including_ the hospitalisation period
-* **OUT_OF_APC**: test results collected outside of a hospitalisation episode
-* **OUT_OF_TOTAL_EXCLUSION_ZONE**: test results collected outside of any buffered hospitalisation episode (hospitalisation episode + 14 days either side)   
+By extension, test result dates can be classifed in one of 7 (some non-mutually exclusive) categories.
+
+<details>
+   <summary>Test result data categories</summary>
+   
+   * **IN_APC_ONLY**: test results collected in an actual hospitalisation episode
+   * **IN_BUFFER_BEFORE**: test results collected within the 14d prior to a hospitalisation episode
+   * **IN_BUFFER_AFTER**: test results collected within the 14d following a hospitalisation episode
+   * **IN_BUFFER_ANY**: test results collected _either_ within the 14d prior to, or following, a hospitalisation episode _but_ not during the actual hospitalisation period
+   * **IN_TOTAL_EXCLUSION_ZONE**: test results collected within a period from 14 days prior to a hospitalisation episode to 14 days following a hospitalisation episode _including_ the hospitalisation period
+   * **OUT_OF_APC**: test results collected outside of a hospitalisation episode
+   * **OUT_OF_TOTAL_EXCLUSION_ZONE**: test results collected outside of any buffered hospitalisation episode (hospitalisation episode + 14 days either side)   
+
+</details>
 
 ### STEP 4: Perform unit conversions and exclude out of range results
 
