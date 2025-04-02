@@ -112,7 +112,7 @@ All files phenotypes processed are listed in [Appendix A](#appendix-a-list-of-pr
 ## Pipeline steps
 It is advisable to run the pipeline on a VM with lots of memory, typically an `n2d-highmem` 32 processor VM with 256Gb memory.
 
-All intermediary files are available in [`.arrow` format](https://arrow.apache.org/overview/)
+All intermediary files are available in [`.arrow` format](https://arrow.apache.org/overview/){:target="_blank"}
 
 ### STEP 0: Transfer phenotype data to `ivm`
 Phenotype data is large in both size and number of files and stored in different direcotries at different directory depth.  Buffering issues affect processing of data directly from the `/library-red/` Google Cloud bucket.  It is therefore simpler to copy all phenotype file to the `ivm` running `QUANT_PY`.  This transfer can be effected within the pipeline by setting a pipeline flag.
