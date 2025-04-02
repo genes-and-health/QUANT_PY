@@ -168,7 +168,7 @@ Admitted Patient Care episodes are extracted from HES data pulls of 2021-09, 202
 * buffer_before: a date span of 14d prior to addmission date
 * buffer_after: a date span of 14d after discharge date
 
-**COMBO** test results are flagged to none (`null`), one or more of the above by joining the APC data to **COMBO**.  For example, a date may exists within and APC period (flagged as `\["APC"\]`), or within an APC and a buffer_before (for example if the date falls both within an APC and within the buffer_before of the subsequent APC; flagged as \["APC", "buffer_before"\]).
+**COMBO** test results are flagged to none (`null`), one or more of the above by joining the APC data to **COMBO**.  For example, a date may exists within and APC period (flagged as `["APC"]`), or within an APC and a buffer_before (for example if the date falls both within an APC and within the buffer_before of the subsequent APC; flagged as `["APC", "buffer_before"]`).
 
 By extension, test result dates can be classifed in one of 11 (some non-mutually exclusive) categories.
 
@@ -200,7 +200,7 @@ COMBO is joined to a denormalised traits dataframe (`traits_features` x `trait_a
 
 When volunteers take part in stage 1 of Genes & Health, their questionnaire and consent form is labelled with the ID number on the Oragene saliva tube (style: `15001502031604`). These Oragene IDs are then used to label genetic samples (e.g. GSA chip or exome seq). They also label the Questionnaire (aka S1QT). Some people have taken part twice (or more than twice) over the years in Genes & Health, and will have a different Oragene ID each time.  The **OrageneID** is the link to genetic data, the *pseudoNHSnumber** is the link to phenotypic data.
 
-Step 5 uses a `YYYY_MM_DD_MegaLinkage_forTRE.csv`&trad; source file to allow these linkages.
+Step 5 uses a `YYYY_MM_DD_MegaLinkage_forTRE.csv`&trade; source file to allow these linkages.
 
 <details>
    <summary>This file has the following columns</summary>
@@ -210,9 +210,9 @@ Step 5 uses a `YYYY_MM_DD_MegaLinkage_forTRE.csv`&trad; source file to allow the
    * **S1QST gender**: 1=male, 2=female
    * **HasValidNHS**: "yes", "no"
    * **pseudonhs_2024-07-10**: pseudoNHSnumber
-   * **51176GSA-T0PMedr3 Jan2024release**: GSA identifier (
-   * **44628exomes_release_2023-JUL-07**:
-   * **55273exomes_release_2024-OCT-08**:
+   * **51176GSA-T0PMedr3 Jan2024release**: GSA identifier (OrageneID_GSAID_RunID; OrageneID as above, GSAID = 12digit identified, RunID = row/col in format RxxCxx where x = digit)
+   * **44628exomes_release_2023-JUL-07**: Broad Institute Exome sequencing ID (= GNH-+OrageneID)
+   * **55273exomes_release_2024-OCT-08**: Broad Institute Exome sequencing ID (= GNH-+OrageneID)
    
 </details>
 
