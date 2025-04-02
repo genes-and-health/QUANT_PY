@@ -194,6 +194,37 @@ COMBO is joined to a denormalised traits dataframe (`traits_features` x `trait_a
 
 ### Step 5: COMBO restricted to valid pseudoNHS numbers and valid demographics
 
+When volunteers take part in stage 1 of Genes & Health, their questionnaire and consent form is labelled with the ID number on the Oragene saliva tube (style: `15001502031604`). These Oragene IDs are then used to label genetic samples (e.g. GSA chip or exome seq). They also label the Questionnaire (aka S1QT). Some people have taken part twice (or more than twice) over the years in Genes & Health, and will have a different Oragene ID each time.  The **OrageneID** is the link to genetic data, the *pseudoNHSnumber** is the link to phenotypic data.
+
+Step 5 uses a `YYYY_MM_DD_MegaLinkage_forTRE.csv`&trad; source file to allow these linkages.
+
+<details>
+   <summary>This file has the following columns</summary>
+   
+      * **OrageneID**: 
+      * **Number of OrageneIDs with this NHS number (i.e. taken part twice or more)**:
+      * **S1QST gender**:
+      * **HasValidNHS**:
+      * **pseudonhs_2024-07-10**:
+      * **51176GSA-T0PMedr3 Jan2024release**:
+      * **44628exomes_release_2023-JUL-07**:
+      * **55273exomes_release_2024-OCT-08**:
+   
+</details>
+
+
+
+
+
+OrageneID,Number of OrageneIDs with this NHS number (i.e. taken part twice or more),S1QST gender,HasValidNHS,pseudonhs_2024-07-10,51176GSA-T0PMedr3 Jan2024release,44628exomes_release_2023-JUL-07,55273exomes_release_2024-OCT-08
+1xxxxxxxxxx2,1,1,yes,2xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0,1xxxxxxxxxx2 2xxxxxxxxxx2 Rxxxx2GH-1xxxxxxxxxx2,GMH-1xxxxxxxxxx2
+1xxxxxxxxxx0,1,2,yes,8xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0,1xxxxxxxxxx0 2xxxxxxxxxx2 Rxxxx2GH-1xxxxxxxxxx2,GMH-1xxxxxxxxxx0
+1xxxxxxxxxx2,1,1,yes,9xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8,1xxxxxxxxxx2 2xxxxxxxxxx2 Rxxxx2GH-1xxxxxxxxxx2,GMH-1xxxxxxxxxx2
+1xxxxxxxxxx0,1,2,yes,8xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx5,1xxxxxxxxxx0 2xxxxxxxxxx2 Rxxxx2GH-1xxxxxxxxxx2,GMH-1xxxxxxxxxx0
+1xxxxxxxxxx0,1,1,yes,0xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8,1xxxxxxxxxx0 2xxxxxxxxxx2 Rxxxx2GH-1xxxxxxxxxx2,GMH-1xxxxxxxxxx0
+1xxxxxxxxxx7,1,1,yes,8xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0,1xxxxxxxxxx7 2xxxxxxxxxx2 Rxxxx1GH-1xxxxxxxxxx7,GMH-1xxxxxxxxxx7
+1xxxxxxxxxx8,1,2,yes,4xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx4,1xxxxxxxxxx8 2xxxxxxxxxx2 Rxxxx2GH-1xxxxxxxxxx8,GMH-1xxxxxxxxxx8
+
 #### Filter to valid pseudoNHS number
 There are approximately 1,000 rows excluded by this pseudoNHS validation.
 Possible reasons:
