@@ -201,14 +201,14 @@ Step 5 uses a `YYYY_MM_DD_MegaLinkage_forTRE.csv`&trad; source file to allow the
 <details>
    <summary>This file has the following columns</summary>
    
-      * **OrageneID**: 
-      * **Number of OrageneIDs with this NHS number (i.e. taken part twice or more)**:
-      * **S1QST gender**:
-      * **HasValidNHS**:
-      * **pseudonhs_2024-07-10**:
-      * **51176GSA-T0PMedr3 Jan2024release**:
-      * **44628exomes_release_2023-JUL-07**:
-      * **55273exomes_release_2024-OCT-08**:
+   * **OrageneID**: 14 digit unique OrageneID
+   * **Number of OrageneIDs with this NHS number (i.e. taken part twice or more)**: 1, 2, 3 or 4.  Typically 1 (single participation), 2 (~10% individuals), 3 (~0.7% individuals), 4 (~0.05% individuals)
+   * **S1QST gender**: 1=male, 2=female
+   * **HasValidNHS**: "yes", "no"
+   * **pseudonhs_2024-07-10**: pseudoNHSnumber
+   * **51176GSA-T0PMedr3 Jan2024release**: GSA identifier (
+   * **44628exomes_release_2023-JUL-07**:
+   * **55273exomes_release_2024-OCT-08**:
    
 </details>
 
