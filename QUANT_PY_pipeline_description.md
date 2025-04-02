@@ -111,6 +111,9 @@ All files phenotypes processed are listed in [Appendix A](#appendix-a-list-of-pr
 
 ## Pipeline steps
 It is advisable to run the pipeline on a VM with lots of memory, typically an `n2d-highmem` 32 processor VM with 256Gb memory.
+
+All intermediary files are available in [`.arrow` format](https://arrow.apache.org/overview/)
+
 ### STEP 0: Transfer phenotype data to `ivm`
 Phenotype data is large in both size and number of files and stored in different direcotries at different directory depth.  Buffering issues affect processing of data directly from the `/library-red/` Google Cloud bucket.  It is therefore simpler to copy all phenotype file to the `ivm` running `QUANT_PY`.  This transfer can be effected within the pipeline by setting a pipeline flag.
 
@@ -126,10 +129,16 @@ Processed files are listed in [Appendix A](#Appendix_A__--_List_of_processed_phe
 #### Intermediary `.arrow` files
 These can be useful for debugging purposes or for researchers interested in phenotypic data from a specific source.
 
-Per provenance `.arrow` files are prepared at each step.  These can be found in the following directories (with an examplar `.arrow` file listed for each directory:
-* **`.../data/primary_care/arrow/`**: `2024_12_Discover_path.arrow`
-* **`.../data/secondary_care/arrow`**: `2023_05_Bradford_measurements.arrow`
-* **`.../data/secondary_care/nda`**: `2025_04_formatted_nda.arrow`
+<details>
+
+   <summary>Per provenance `.arrow` files</summary>
+   
+   These can be found in the following directories (with an examplar `.arrow` file listed for each directory:
+   * **`.../data/primary_care/arrow/`**: `2024_12_Discover_path.arrow`
+   * **`.../data/secondary_care/arrow`**: `2023_05_Bradford_measurements.arrow`
+   * **`.../data/secondary_care/nda`**: `2025_04_formatted_nda.arrow`
+
+</details>
 
 ### STEP 2: Progressively merge files to create COMBO file
 
