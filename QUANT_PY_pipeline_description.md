@@ -22,7 +22,7 @@ This file lists all the quantitative traits currently extracted from the phenoty
 
 <details>
    
-<summary>Extract</summary>
+<summary>`trait_features.csv` file extract</summary>
   
 ```
 trait,target_units,min,max
@@ -44,7 +44,7 @@ SNOMED codes are missing for some of the G&H data pulls, this means that quantit
 
 <details>
    
-<summary>Extract</summary>
+<summary>`trait_aliases_long.csv` file extract</summary>
   
 ```
 trait,alias
@@ -68,7 +68,7 @@ The same trait may be measured in different units depending of the setting (e.g.
 
 <details>
    
-<summary>Extract</summary>
+<summary>`trait_aliases_long.csv` file extract</summary>
   
 ```
 result_value_units,target,multiplication_factor
