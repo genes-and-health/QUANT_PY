@@ -175,16 +175,16 @@ By extension, test result dates can be classifed in one of 11 (some non-mutually
 <details>
    <summary>Test result data categories</summary>
    
-   1. **APC_ONLY**: test results collected in an actual hospitalisation episode not overlapping with the buffer of another APC
-   2. **APC_ANY**: test results collected in an actual hospitalisation episode (which may overlap another APC's buffer)
+   1. **IN_APC_ONLY**: test results collected in an actual hospitalisation episode not overlapping with the buffer of another APC
+   2. **IN_APC_ANY**: test results collected in an actual hospitalisation episode (which may overlap another APC's buffer)
    3. **IN_BUFFER_BEFORE_ONLY**: test results collected within the 14d prior to a hospitalisation episode (not overlapping with another APC or another APC's buffer)
    4. **IN_BUFFER_BEFORE_ANY**: test results collected within any APC's 14d prior to a hospitalisation episode
    5. **IN_BUFFER_AFTER_ONLY**: test results collected within the 14d following a hospitalisation episode (not overlapping with another APC or another APC's buffer)
    6. **IN_BUFFER_AFTER_ANY**: test results collected within any APC's 14d following a hospitalisation episode
-   7. **IN_BUFFER_ONLY**: test results collected _either_ within the 14d prior to, or following, a hospitalisation episode _but_ not during the actual hospitalisation period
-   8. **IN_BUFFER_ANY**: test results collected _either_ within the 14d prior to, or following, a hospitalisation episode (may overlap with one or more APCs)
+   7. **IN_BUFFERS_ONLY**: test results collected _either_ within the 14d prior to, or following, a hospitalisation episode _and_ not during the actual hospitalisation period
+   8. **IN_BUFFERS_ANY**: test results collected _either_ within the 14d prior to, or following, a hospitalisation episode (may overlap with one or more APCs)
    9. **IN_TOTAL_EXCLUSION_ZONE**: test results collected within a period from 14 days prior to a hospitalisation episode to 14 days following a hospitalisation episode _including_ the hospitalisation period
-   10. **OUT_OF_HOSPITAL**: test results collected outside of any APC hospitalisation episode
+   10. **OUT_OF_APC**: test results collected outside of any APC hospitalisation episode
    11.  **OUT_OF_TOTAL_EXCLUSION_ZONE**: test results collected outside of any buffered hospitalisation episode (hospitalisation episode + 14 days either side)   
 
 </details>
