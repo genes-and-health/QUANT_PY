@@ -63,12 +63,12 @@ creatinine,Creatinine level (observable entity)
 
 </details>
 
-#### _`trait_aliases_long.csv`_
+#### _`unit_conversions.csv`_
 The same trait may be measured in different units depending of the setting (e.g. primary vs secondary care) or the data source (trust 1 vs trust 2).  This file allows unit conversions if a trait in a valid but undesired unit can be converted to a target_unit (as defined in `trait_features.csv`).  It also acts a a synonym dictionary to standardise unit terminology, for example, `nmol/L` is converted into the preferred term `nanomol/L`. Such conversions can be identified by a `multiplication_factor` of 0.0. 
 
 <details>
    
-<summary>"trait_aliases_long.csv" file extract</summary>
+<summary>"unit_conversions.csv" file extract</summary>
   
 ```
 result_value_units,target,multiplication_factor
@@ -163,7 +163,18 @@ On 2025-04-01, the **COMBO** `2025_04_Combined_all_sources.arrow` was `78,582,47
 
 ### STEP 3: Add hospitalisation status column
 
-Admitted Patient Care episodes are extracted from HES data pulls of 2021-09, 2023-07, 2024-10, and 2025-03.  These data defined three APC `region_types`:
+#### Import HES data
+
+Admitted Patient Care episodes are extracted from HES data pulls of 2021-09, 2023-07, 2024-10, and 2025-03. HES APC data are imported, cleaned up and deduplicated.
+
+> [!TIP]
+> The output of the HES APC pulls merges and deduplication are in the **`.../data/combined_datasets/`** directory:
+> 
+>  **`.../data/combined_datasets/`**: `YYYY_MM_Combined_HES.arrow`
+
+#### Flagging COMBO result dates
+
+The HES dataset is use to define three APC `region_types`:
 * APC: a date span for the APC
 * buffer_before: a date span of 14d prior to addmission date
 * buffer_after: a date span of 14d after discharge date
@@ -189,12 +200,19 @@ By extension, test result dates can be classifed in one of 11 (some non-mutually
 
 </details>
 
-### STEP 4: Perform unit conversions and exclude out of range results
+### STEP 4: Perform unit conversions and flag out of range **COMBO** results
 
 COMBO is joined to a denormalised traits dataframe (`traits_features` x `trait_aliases`) which identifies COMBO row with traits to extract, their target units and their valid range.  Unit conversions are performed where possible and applicable and final results are flagged as:
+
 * **below_min**: result lower than the minimum value set for this trait.  These will subsequently be excluded.
 * **ok**: result within valid range for this trait.
 * **above_max**: result higher than the maximum value set for this trait.  These will subsequently be excluded.
+
+> [!NOTE]
+> HbA1c values in `%` (percentages) are converted to values in `millimol/mol`, this conversion cannot be done using the `unit_conversions.csv` as percentages apply to traits other than HbA1c.  
+> The equation ued for conversion is $mmol\/mol \[IFCC\] =  (10.93*NGSP/UKPDS)$
+>
+>  (%age)) - 23.50 mmol/mol
 
 ### Step 5: COMBO restricted to valid pseudoNHS numbers and valid demographics
 
