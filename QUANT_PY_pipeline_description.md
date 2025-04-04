@@ -198,7 +198,7 @@ COMBO is joined to a denormalised traits dataframe (`traits_features` x `trait_a
 
 ### Step 5: COMBO restricted to valid pseudoNHS numbers and valid demographics
 
-When volunteers take part in stage 1 of Genes & Health, their questionnaire and consent form is labelled with the ID number on the Oragene saliva tube (style: `15001502031604`). These Oragene IDs are then used to label genetic samples (e.g. GSA chip or exome seq). They also label the Questionnaire (aka S1QT). Some people have taken part twice (or more than twice) over the years in Genes & Health, and will have a different Oragene ID each time.  The **OrageneID** is the link to genetic data, the *pseudoNHSnumber** is the link to phenotypic data.
+When volunteers take part in stage 1 of Genes & Health, their questionnaire and consent form is labelled with the ID number on the Oragene saliva tube (style: `15001502031604`). These Oragene IDs are then used to label genetic samples (e.g. GSA chip or exome seq). They also label the Questionnaire (aka S1QT). Some people have taken part twice (or more than twice) over the years in Genes & Health, and will have a different Oragene ID each time.  The **OrageneID** is the link to genetic data, the **pseudoNHSnumber** is the link to phenotypic data.
 
 Step 5 uses a `YYYY_MM_DD_MegaLinkage_forTRE.csv`&trade; source file to allow these linkages.
 
