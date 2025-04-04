@@ -278,9 +278,9 @@ These can all be found in the **`.../outputs/`** directory
 ## OUTPUT FILES
 The following files are generated from the QCed **COMBO** generated in **STEP 6**
 
-1. Per trait file \['../outputs/individual_trait_files/`\; subdirectories: `in_hospital`, `out_hospital`, `all`]:
-     - `_{trait}_readings_at_unique_timepoints.csv`: one validate result per row (`pseudo_nhs_number, trait, unit, value, date, gender, age_at_test, minmax_outlier` columns) 
-     - `_{trait}_readings_at_unique_timepoints.csv`: one validate result per row (`pseudo_nhs_number, trait, unit, value, date, gender, age_at_test, minmax_outlier` columns)
+1. **per trait files** \['../outputs/individual_trait_files/`\; subdirectories: `in_hospital`, `out_hospital`, `all`]:
+     - **`_{trait}_readings_at_unique_timepoints.csv`**: one validated result per row (`pseudo_nhs_number, trait, unit, value, date, gender, age_at_test, minmax_outlier` columns) 
+     - **`_{trait}_per_individual_stats.csv`**: one row per volunteer (`pseudo_nhs_number, trait, median, mean, max, min, earliest, latest, number_observations` columns)
 
 # Appendix A: List of processed phenotype files
 ```
