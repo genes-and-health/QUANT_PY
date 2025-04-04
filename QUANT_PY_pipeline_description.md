@@ -200,20 +200,20 @@ By extension, test result dates can be classifed in one of 11 (some non-mutually
 
 </details>
 
-### STEP 4: Perform unit conversions and flag out of range **COMBO** results
+### STEP 4: Perform unit conversions and flag out-of-range **COMBO** results
 
-COMBO is joined to a denormalised traits dataframe (`traits_features` x `trait_aliases`) which identifies COMBO row with traits to extract, their target units and their valid range.  Unit conversions are performed where possible and applicable and final results are flagged as:
+COMBO is joined to a denormalised traits dataframe (`traits_features` x `trait_aliases`) which identifies COMBO row with traits to extract, their target units and their valid range.  **Unit conversions are performed where possible and applicable** and final results are flagged as:
 
 * **below_min**: result lower than the minimum value set for this trait.  These will subsequently be excluded.
 * **ok**: result within valid range for this trait.
 * **above_max**: result higher than the maximum value set for this trait.  These will subsequently be excluded.
 
 > [!NOTE]
-> HbA1c values in `%` (percentages) are converted to values in `millimol/mol`, this conversion cannot be done using the `unit_conversions.csv` as percentages apply to traits other than HbA1c.  
-> The equation ued for conversion is $mmol\/mol \[IFCC\] =  (10.93*percentage \[NGSP/UKPD\]) - 23.50$  
+> HbA1c values in `%` (percentages) are converted to values in `millimol/mol` using the following equation: $mmol\/mol \[IFCC\] =  (10.93*percentage \[NGSP/UKPD\]) - 23.50$  
 > See [National Glycohemoglobin Standardization Program](https://ngsp.org/ifccngsp.asp) 
->
->  _(This link does not automatically open in a new window. Use CTRL+click (on Windows and Linux) or CMD+click (on MacOS) to open the link in a new window)_
+> _(This link does not automatically open in a new window. Use CTRL+click (on Windows and Linux) or CMD+click (on MacOS) to open the link in a new window)_ 
+> 
+> Because percentages apply to traits other than HbA1c, this conversion cannot be done using the `unit_conversions.csv` and needs to be "hard-coded" in the pipeline.  
 
 ### Step 5: COMBO restricted to valid pseudoNHS numbers and valid demographics
 
@@ -222,7 +222,7 @@ When volunteers take part in stage 1 of Genes & Health, their questionnaire and 
 Step 5 uses a `YYYY_MM_DD_MegaLinkage_forTRE.csv`&trade; source file to allow these linkages.
 
 <details>
-   <summary>This file has the following columns</summary>
+   <summary>MegaLinkage&trade; file columns</summary>
    
    * **OrageneID**: 14 digit unique OrageneID
    * **Number of OrageneIDs with this NHS number (i.e. taken part twice or more)**: 1, 2, 3 or 4.  Typically 1 (single participation), 2 (~10% individuals), 3 (~0.7% individuals), 4 (~0.05% individuals)
@@ -236,7 +236,7 @@ Step 5 uses a `YYYY_MM_DD_MegaLinkage_forTRE.csv`&trade; source file to allow th
 </details>
 
 <details>
-   <summary>Extract from  `2025_02_10_MegaLinkage_forTRE.csv`&trade [redacted]</summary>
+   <summary>Extract from <code>2025_02_10_MegaLinkage_forTRE.csv</code>&trade; [redacted]</summary>
 
    ```
    OrageneID,Number of OrageneIDs with this NHS number (i.e. taken part twice or more),S1QST gender,HasValidNHS,pseudonhs_2024-07-10,51176GSA-T0PMedr3 Jan2024release,44628exomes_release_2023-JUL-07,55273exomes_release_2024-OCT-08
@@ -259,9 +259,14 @@ Possible reasons:
 2. subject died
 3. subject had multiple pseudoNHS which have been merged
 
-Import mega_linkage file ᵀᴹ
-Restrict data to pseudoNHS in mega_linkage file ᵀᴹ
-Use mega_linkage file ᵀᴹ to link to S1QST for DOB
+#### Filter to valid demographics
+Use `MegaLinkage file`$trade; to link to Stage 1 questionnaire data found in `/library-red/genesandhealth/phenotype_raw_data/QMUL__Stage1Questionnaire`.  This gives patient MONTH/YEAR of birth.  All volunteers are assumed to be born on the first day of a month.  Results are excluded if age on test is not greater or equal to zero (i.e. result before birth of volunteer) or the result is dated beyond the date of the run execution (i.e. results dated to the future).
+
+Results obtained prior to 16 years of age are also excluded.
+
+#### Filter to within-range values
+Only rows with a `range_position` equal to `ok` (cf. `below_min` and `above_max`) are kept.
+
 
 ...and filter to valid pseudoNHS
 
