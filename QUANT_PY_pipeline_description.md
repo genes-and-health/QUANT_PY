@@ -210,9 +210,10 @@ COMBO is joined to a denormalised traits dataframe (`traits_features` x `trait_a
 
 > [!NOTE]
 > HbA1c values in `%` (percentages) are converted to values in `millimol/mol`, this conversion cannot be done using the `unit_conversions.csv` as percentages apply to traits other than HbA1c.  
-> The equation ued for conversion is $mmol\/mol \[IFCC\] =  (10.93*NGSP/UKPDS)$
+> The equation ued for conversion is $mmol\/mol \[IFCC\] =  (10.93*percentage \[NGSP/UKPD\]) - 23.50$  
+> See [National Glycohemoglobin Standardization Program](https://ngsp.org/ifccngsp.asp) 
 >
->  (%age)) - 23.50 mmol/mol
+>  _(This link does not automatically open in a new window. Use CTRL+click (on Windows and Linux) or CMD+click (on MacOS) to open the link in a new window)_
 
 ### Step 5: COMBO restricted to valid pseudoNHS numbers and valid demographics
 
