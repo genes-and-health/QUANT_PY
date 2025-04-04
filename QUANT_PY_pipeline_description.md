@@ -268,7 +268,19 @@ Results obtained prior to 16 years of age are also excluded.
 Only rows with a `range_position` equal to `ok` (cf. `below_min` and `above_max`) are kept.
 
 ### STEP 6: Window data in 10day windows
-Because the same quantitaive result can came from multiple source with a similar but non-identical date (e.g. a secondary care result registered in an individual's primary care record with the date it was received in primary care rather then the actual test result date), the quantitative data are "windowed".  A rolling 10d window is applied and any identical test results within this window are deduplicated even if the result dates differ.  The earliest instance of the result is kept.
+Because the same quantitaive result can came from multiple source with a similar but non-identical date (e.g. a secondary care result registered in an individual's primary care record with the date it was received in primary care rather then the actual test result date), the quantitative data are "windowed".
+
+A rolling 10d window is applied and any identical test results within this window are deduplicated even if the result dates differ.  The earliest instance of the result is kept.
+
+### STEP 7: Generate output files
+These can all be found in the **`.../outputs/`** directory
+
+## OUTPUT FILES
+The following files are generated from the QCed **COMBO** generated in **STEP 6**
+
+1. Per trait file \['../outputs/individual_trait_files/`\; subdirectories: `in_hospital`, `out_hospital`, `all`]:
+     - `_{trait}_readings_at_unique_timepoints.csv`: one validate result per row (`pseudo_nhs_number, trait, unit, value, date, gender, age_at_test, minmax_outlier` columns) 
+     - `_{trait}_readings_at_unique_timepoints.csv`: one validate result per row (`pseudo_nhs_number, trait, unit, value, date, gender, age_at_test, minmax_outlier` columns)
 
 # Appendix A: List of processed phenotype files
 ```
