@@ -267,10 +267,8 @@ Results obtained prior to 16 years of age are also excluded.
 #### Filter to within-range values
 Only rows with a `range_position` equal to `ok` (cf. `below_min` and `above_max`) are kept.
 
-
-...and filter to valid pseudoNHS
-
-In quant_py, we now use the DvH's 2025_02_10_MegaLinkage_forTRE.csv ᵀᴹ
+### STEP 6: Window data in 10day windows
+Because the same quantitaive result can came from multiple source with a similar but non-identical date (e.g. a secondary care result registered in an individual's primary care record with the date it was received in primary care rather then the actual test result date), the quantitative data are "windowed".  A rolling 10d window is applied and any identical test results within this window are deduplicated even if the result dates differ.  The earliest instance of the result is kept.
 
 # Appendix A: List of processed phenotype files
 ```
