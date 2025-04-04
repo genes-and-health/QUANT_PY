@@ -278,9 +278,18 @@ These can all be found in the **`.../outputs/`** directory
 ## OUTPUT FILES
 The following files are generated from the QCed **COMBO** generated in **STEP 6**
 
-1. **per trait files** \['../outputs/individual_trait_files/`\; subdirectories: `in_hospital`, `out_hospital`, `all`]:
-     - **`_{trait}_readings_at_unique_timepoints.csv`**: one validated result per row (`pseudo_nhs_number, trait, unit, value, date, gender, age_at_test, minmax_outlier` columns) 
-     - **`_{trait}_per_individual_stats.csv`**: one row per volunteer (`pseudo_nhs_number, trait, median, mean, max, min, earliest, latest, number_observations` columns)
+1. **per trait files** \[`../outputs/individual_trait_files/`; subdirectories: `in_hospital`, `out_hospital`, `all`\]:
+     - **`_{trait}_readings_at_unique_timepoints.csv`**: one validated result per row (columns: `pseudo_nhs_number, trait, unit, value, date, gender, age_at_test, minmax_outlier`) 
+     - **`_{trait}_per_individual_stats.csv`**: one row per volunteer (`pseudo_nhs_number, trait, median, mean, max, min, earliest, latest, number_observations`)
+2. **per trait plots** \[`../outputs/individual_trait_plots/`; subdirectories: `in_hospital`, `out_hospital`, `all`\]:
+      - **`_{trait}_{setting}.svg`**: Histograms of trait log10(values) for trait separated M and F listing median, mean, min, max, number individuals, number observations
+3. **reginie files** \[`../outputs/regenie/`; subdirectories: `in_hospital`, `out_hospital`, `all` and `covariate_files`\]:
+      - **`_{trait}_{setting}_[regenie_51|regenie_55].tsv`**: regenie files for 51kGWAS and 55kExome analyses
+      - **`./covariate_files/_{setting}_[regenie_51|regenie_55]_megawide.tsv`**: regenie covariate files allowing age at test analyses (cf. age on joining Genes and Health)
+3. **reginie files** \[`../outputs/regenie/`; subdirectories: `in_hospital`, `out_hospital`, `all` and `covariate_files`\]:
+      - **`_{trait}_{setting}_[regenie_51|regenie_55].tsv`**: regenie files for 51kGWAS and 55kExome analyses
+      - **`./covariate_files/_{setting}_[regenie_51|regenie_55]_megawide.tsv`**: regenie covariate files allowing age at test analyses (cf. age on joining Genes and Health)
+
 
 # Appendix A: List of processed phenotype files
 ```
