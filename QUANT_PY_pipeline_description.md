@@ -286,9 +286,10 @@ The following files are generated from the QCed **COMBO** generated in **STEP 6*
 3. **reginie files** \[`../outputs/regenie/`; subdirectories: `in_hospital`, `out_hospital`, `all` and `covariate_files`\]:
       - **`_{trait}_{setting}_[regenie_51|regenie_55].tsv`**: regenie files for 51kGWAS and 55kExome analyses
       - **`./covariate_files/_{setting}_[regenie_51|regenie_55]_megawide.tsv`**: regenie covariate files allowing age at test analyses (cf. age on joining Genes and Health)
-3. **reginie files** \[`../outputs/regenie/`; subdirectories: `in_hospital`, `out_hospital`, `all` and `covariate_files`\]:
-      - **`_{trait}_{setting}_[regenie_51|regenie_55].tsv`**: regenie files for 51kGWAS and 55kExome analyses
-      - **`./covariate_files/_{setting}_[regenie_51|regenie_55]_megawide.tsv`**: regenie covariate files allowing age at test analyses (cf. age on joining Genes and Health)
+4. **reference COMBO files** \[`../outputs/reference_combo_files/`\]:
+      - **`_Combined_all_sources.arrow`**: the "raw" merger of primary, secondary and NDA data.  No QC, no restriction to the 111 traits extracted in `version010_2025_04`
+      - **`_Combined_traits_NHS_and_demographics_restircted_pre_10d_windowing`**: above file processed to limit to valid NHS number, valid demographics and valid values but _not_ windowed (end of **STEP 5**)
+      - **`_Combined_traits_NHS_and_demographics_restircted_post_10d_windowing`**: above file processed to limit to valid NHS number, valid demographics and valid values _and_ windowed (end of **STEP 6**)
 
 
 # Appendix A: List of processed phenotype files
