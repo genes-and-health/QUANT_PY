@@ -11,7 +11,7 @@ Based on the "Quantitive Traits processing pipeline Jan 2025 redo" `pipeline_jan
 
 ## Summary
 
-The Genes & Health (G&H) `QUANT_PY` pipeline extracts and processes quantitative data from G&H phenotype data.  It creates files and covariate files suitable for `regenie` \[G/Ex\]WAS analysis as well as generic files for each quatitative trait at a _per individual_ level (one row per individual summarising the individual's values for the trait) and a _per result_ level (one line per individual-result).  The pipeline processes HES data to identify admitted patient care (APC) episodes.  From this, three versions of the created files are generated: 1) All data, 2) Out of hospital data (without APC + a buffer), 3) In hospital data (within APC + a  buffer).
+The Genes & Health (G&H) `QUANT_PY` pipeline extracts and processes quantitative data from G&H phenotype data.  It creates files and covariate files suitable for `regenie` \[G/Ex\]WAS analysis as well as generic files for each quantitative trait at a _per individual_ level (one row per individual summarising the individual's values for the trait) and a _per result_ level (one line per individual-result).  The pipeline processes HES data to identify admitted patient care (APC) episodes.  From this, three versions of the created files are generated: 1) All data, 2) Out of hospital data (without APC + a buffer), 3) In hospital data (within APC + a  buffer).
 
 ## Input data
 ### Trait files
@@ -64,7 +64,7 @@ creatinine,Creatinine level (observable entity)
 </details>
 
 #### _`unit_conversions.csv`_
-The same trait may be measured in different units depending of the setting (e.g. primary vs secondary care) or the data source (trust 1 vs trust 2).  This file allows unit conversions if a trait in a valid but undesired unit can be converted to a target_unit (as defined in `trait_features.csv`).  It also acts a a synonym dictionary to standardise unit terminology, for example, `nmol/L` is converted into the preferred term `nanomol/L`. Such conversions can be identified by a `multiplication_factor` of 0.0. 
+The same trait may be measured in different units depending of the setting (e.g. primary vs secondary care) or the data source (trust 1 vs trust 2).  This file allows unit conversions if a trait in a valid but undesired unit can be converted to a target_unit (as defined in `trait_features.csv`).  It also acts as a synonym dictionary to standardise unit terminology, for example, `nmol/L` is converted into the preferred term `nanomol/L`. Such conversions can be identified by a `multiplication_factor` of 1.0. 
 
 <details>
    
@@ -86,9 +86,9 @@ Units/Day,units/week,7.0
 
 ### Hospital admission data
 
-`QUANT_PY` uses NHS England Digital Hospital Episode Statistics (HES) Admitted Patient Care (APC) data to identify periods of hospitalisation --as certain hospital day treatments are logged as APC events (e.g. immunotherapy infusions), **only APC episodes >2 calendar days are considered as hospitalisation**.  At present, `QUANT_PY` does not exclude data obtained during a A&E episode (HES AE + ECDS) unless this leads to a hospital admission (in which case it is "subsumed" by an APC episode).  However, the script is written such that it could be accommodate these if needed/desired.
+`QUANT_PY` uses NHS England Digital Hospital Episode Statistics (HES) Admitted Patient Care (APC) data to identify periods of hospitalisation --as certain hospital day treatments are logged as APC events (e.g. immunotherapy infusions), **only APC episodes >2 calendar days are considered as hospitalisation**.  At present, `QUANT_PY` does not exclude data obtained during a A&E episode (HES AE + ECDS) unless this leads to a hospital admission (in which case it is "subsumed" by an APC episode).  However, the script is written such that it could accommodate these if needed/desired.
 
-`QUANT_PY` **extends the hospitalisation episode by a 2-week buffer on either side of the APC event** on the basis that individiuals admitted to hospital are typically unwell in the days leading to hospitalisation and may be discharged recovering, but prior to a return to their baseline status.
+`QUANT_PY` **extends the hospitalisation episode by a 2-week buffer on either side of the APC event** on the basis that individuals admitted to hospital are typically unwell in the days leading to hospitalisation and may be discharged recovering, but prior to a return to their baseline status.
 
 ### Phenotype data
 The pipeline imports G&H phenotype data from `/library-red/phenotypes_rawdata/`, that is, from the following sources:
@@ -97,10 +97,10 @@ The pipeline imports G&H phenotype data from `/library-red/phenotypes_rawdata/`,
 3. **DSA__Discovery_7CCGs**: Primary care data from the North East London ICS \[North East London: ~45,000 individuals with data\]
 4. **DSA_NHSDigital**: Data from the National Diabetes Audit (NDA) \[England-wide: ~13,000 individuals with data]
 
-All files phenotypes processed are listed in [Appendix A](#appendix-a-list-of-processed-phenotype-files)
+All files’ phenotypes processed are listed in [Appendix A](#appendix-a-list-of-processed-phenotype-files)
 
-#### Notes about the processing of qunatitative data
-1. `QUANT_PY` **does not use incremental data generation**. Everytime a release is produced, all current and historically collected data are read in, concatenated and **then** deduplicated.
+#### Notes about the processing of quantitative data
+1. `QUANT_PY` **does not use incremental data generation**. Every time a release is produced, all current and historically collected data are read in, concatenated and **then** deduplicated.
 2. The aim of all phenotype processing steps is to produce a combined dataframe with the following columns:
 
 | pseudo_nhs_number | test_date | original_term | result | result_value_units | provenance | source | hash |
@@ -119,11 +119,11 @@ It is advisable to run the pipeline on a VM with lots of memory, typically an `n
 > 
 
 ### STEP 0: Transfer phenotype data to `ivm`
-Phenotype data is large in both size and number of files and stored in different direcotries at different directory depth.  Buffering issues affect processing of data directly from the `/library-red/` Google Cloud bucket.  It is therefore simpler to copy all phenotype file to the `ivm` running `QUANT_PY`.  This transfer can be effected within the pipeline by setting a pipeline flag.
+Phenotype data is large in both size and number of files and stored in different directories at different directory depth.  Buffering issues affect processing of data directly from the `/library-red/` Google Cloud bucket.  It is therefore simpler to copy all phenotype file to the `ivm` running `QUANT_PY`.  This transfer can be effected within the pipeline by setting a pipeline flag.
 
 ### STEP 1: Import phenotype files with appropriate pre-processing
 `R` is very good at handling "raggedness" but in doing so, it makes assumptions.  This can lead to the "wrong" data ending in a column.  Python can also import .csv/.tsv/.tab files and make assumptions about the seprators/raggedness/column data type but in `QUANT_PY` this is intentionally and explicitily avoided.  This means that some files need to be pre-processed.  This take the form of one of the following pre-processing operations:
-1. **Commas in double-quotes stripping**: Exclude any row with double quoted text with one or more commas in in.  This excludes <2% of rows but mean that the parsing behaviour is consistent and predictable.
+1. **Commas in double-quotes stripping**: Exclude any row with double quoted text with one or more commas in in.  This excludes <2% of rows but means that the parsing behaviour is consistent and predictable.
 2. **Exclude "unterminated" double-quotes**: Some rows include a double-quote not paired with a second double-quote before the next separator.  In such cases, the importing functions often "glob" all text in subsequent rows until another double-quote is found.  Therefore these rows are excluded.
 3. **Excluded rows with non-standard number of fields**: some rows may have additional/fewer separators either intentionally or erroneously creating additional/deleting fields.  `QUANT_PY` rejects any lines with a non-standard number of separators.
 4. **Strip double-quote**: This can be applied to non comma-delimited data files.  In some such files, double-quotes can appear singly ("), doubly ("") or even triply (""")
@@ -146,14 +146,14 @@ These can be useful for debugging purposes or for researchers interested in phen
 
 ### STEP 2: Progressively merge files to create COMBO file
 
-Files are merged in the following order (with de-duplication after every merge operation).  Again, intermediate file directories are available as isted:
+Files are merged in the following order (with deduplication after every merge operation).  Again, intermediate file directories are available as listed:
 1. Primary care data + NDA data (primary care data): **`.../data/combined_datasets/`**: `YYYY_MM_Combined_primary_care.arrow`
 2. Barts data + Bradford data (secondary care data): **`.../data/combined_datasets/`**: `YYYY_MM_Combined_secondary_care.arrow`
 
 Finally, primary and secondary care data are merged.
 
 > [!TIP]
-> The final output of the multiple merges is considered a key output of the pipeline and is there stored in the **`.../outputs/`** directory:
+> The final output of the multiple merges is considered a key output of the pipeline and is therefore stored in the **`.../outputs/`** directory:
 > 
 >  **`../outputs/`**: `YYYY_MM_Combined_all_sources.arrow`
 >
@@ -174,12 +174,12 @@ Admitted Patient Care episodes are extracted from HES data pulls of 2021-09, 202
 
 #### Flagging COMBO result dates
 
-The HES dataset is use to define three APC `region_types`:
+The HES dataset is used to define three APC `region_types`:
 * APC: a date span for the APC
 * buffer_before: a date span of 14d prior to addmission date
 * buffer_after: a date span of 14d after discharge date
 
-**COMBO** test results are flagged to none (`null`), one or more of the above by joining the APC data to **COMBO**.  For example, a date may exists within and APC period (flagged as `["APC"]`), or within an APC and a buffer_before (for example if the date falls both within an APC and within the buffer_before of the subsequent APC; flagged as `["APC", "buffer_before"]`).
+**COMBO** test results are flagged to none (`null`), or one or more of the above by joining the APC data to **COMBO**.  For example, a date may exists within and APC period (flagged as `["APC"]`), or within an APC and a buffer_before (for example if the date falls both within an APC and within the buffer_before of a subsequent APC; flagged as `["APC", "buffer_before"]`).
 
 By extension, test result dates can be classifed in one of 11 (some non-mutually exclusive) categories.
 
@@ -187,11 +187,11 @@ By extension, test result dates can be classifed in one of 11 (some non-mutually
    <summary>Test result data categories</summary>
    
    1. **IN_APC_ONLY**: test results collected in an actual hospitalisation episode not overlapping with the buffer of another APC
-   2. **IN_APC_ANY**: test results collected in an actual hospitalisation episode (which may overlap another APC's buffer)
+   2. **IN_APC_ANY**: test results collected in an actual hospitalisation episode (which may overlap another APC's 14d buffer)
    3. **IN_BUFFER_BEFORE_ONLY**: test results collected within the 14d prior to a hospitalisation episode (not overlapping with another APC or another APC's buffer)
-   4. **IN_BUFFER_BEFORE_ANY**: test results collected within any APC's 14d prior to a hospitalisation episode
+   4. **IN_BUFFER_BEFORE_ANY**: test results collected within the 14d prior to a hospitalisation episode (may overlap with an APC)
    5. **IN_BUFFER_AFTER_ONLY**: test results collected within the 14d following a hospitalisation episode (not overlapping with another APC or another APC's buffer)
-   6. **IN_BUFFER_AFTER_ANY**: test results collected within any APC's 14d following a hospitalisation episode
+   6. **IN_BUFFER_AFTER_ANY**: test results collected within the 14d following a hospitalisation episode (may overlap with an APC)
    7. **IN_BUFFERS_ONLY**: test results collected _either_ within the 14d prior to, or following, a hospitalisation episode _and_ not during the actual hospitalisation period
    8. **IN_BUFFERS_ANY**: test results collected _either_ within the 14d prior to, or following, a hospitalisation episode (may overlap with one or more APCs)
    9. **IN_TOTAL_EXCLUSION_ZONE**: test results collected within a period from 14 days prior to a hospitalisation episode to 14 days following a hospitalisation episode _including_ the hospitalisation period
@@ -213,7 +213,7 @@ COMBO is joined to a denormalised traits dataframe (`traits_features` x `trait_a
 > See [National Glycohemoglobin Standardization Program](https://ngsp.org/ifccngsp.asp) 
 > _(This link does not automatically open in a new window. Use CTRL+click (on Windows and Linux) or CMD+click (on MacOS) to open the link in a new window)_ 
 > 
-> Because percentages apply to traits other than HbA1c, this conversion cannot be done using the `unit_conversions.csv` and needs to be "hard-coded" in the pipeline.  
+> Because percentages apply to traits other than HbA1c, this conversion cannot be performed using the `unit_conversions.csv` and needs to be "hard-coded" in the pipeline.  
 
 ### Step 5: COMBO restricted to valid pseudoNHS numbers and valid demographics
 
@@ -260,17 +260,17 @@ Possible reasons:
 3. subject had multiple pseudoNHS which have been merged
 
 #### Filter to valid demographics
-Use `MegaLinkage file`$trade; to link to Stage 1 questionnaire data found in `/library-red/genesandhealth/phenotype_raw_data/QMUL__Stage1Questionnaire`.  This gives patient MONTH/YEAR of birth.  All volunteers are assumed to be born on the first day of a month.  Results are excluded if age on test is not greater or equal to zero (i.e. result before birth of volunteer) or the result is dated beyond the date of the run execution (i.e. results dated to the future).
+Use `MegaLinkage file`$trade; to link to Stage 1 questionnaire data found in `/library-red/genesandhealth/phenotype_raw_data/QMUL__Stage1Questionnaire`.  This gives patient MONTH/YEAR of birth.  All volunteers are assumed to be born on the first day of a month.  Results are excluded if age at test is not greater or equal to zero (i.e. result before birth of volunteer) or the result is dated beyond the date of the run execution (i.e. results dated to the future).
 
 Results obtained prior to 16 years of age are also excluded.
 
 #### Filter to within-range values
 Only rows with a `range_position` equal to `ok` (cf. `below_min` and `above_max`) are kept.
 
-### STEP 6: Window data in 10day windows
-Because the same quantitaive result can came from multiple source with a similar but non-identical date (e.g. a secondary care result registered in an individual's primary care record with the date it was received in primary care rather then the actual test result date), the quantitative data are "windowed".
+### STEP 6: Window data in 10-day windows
+Because the same quantitative result can come from multiple sources with a similar but non-identical date (e.g. a secondary care result is registered in an individual's primary care record with the date it was received in primary care rather than the actual test result date), the quantitative data are "windowed".
 
-A rolling 10d window is applied and any identical test results within this window are deduplicated even if the result dates differ.  The earliest instance of the result is kept.
+Non-overlapping 10-day windows are applied and any identical test results within this window are deduplicated even if the result dates differ.  The earliest instance of the result is kept.
 
 ### STEP 7: Generate output files
 These can all be found in the **`.../outputs/`** directory
@@ -283,7 +283,7 @@ The following files are generated from the QCed **COMBO** generated in **STEP 6*
      - **`_{trait}_per_individual_stats.csv`**: one row per volunteer (`pseudo_nhs_number, trait, median, mean, max, min, earliest, latest, number_observations`)
 2. **per trait plots** \[`../outputs/individual_trait_plots/`; subdirectories: `in_hospital`, `out_hospital`, `all`\]:
       - **`_{trait}_{setting}.svg`**: Histograms of trait log10(values) for trait separated M and F listing median, mean, min, max, number individuals, number observations
-3. **reginie files** \[`../outputs/regenie/`; subdirectories: `in_hospital`, `out_hospital`, `all` and `covariate_files`\]:
+3. **regenie files** \[`../outputs/regenie/`; subdirectories: `in_hospital`, `out_hospital`, `all` and `covariate_files`\]:
       - **`_{trait}_{setting}_[regenie_51|regenie_55].tsv`**: regenie files for 51kGWAS and 55kExome analyses
       - **`./covariate_files/_{setting}_[regenie_51|regenie_55]_megawide.tsv`**: regenie covariate files allowing age at test analyses (cf. age on joining Genes and Health)
 4. **reference COMBO files** \[`../outputs/reference_combo_files/`\]:
