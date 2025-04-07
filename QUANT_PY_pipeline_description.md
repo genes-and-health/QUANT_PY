@@ -128,7 +128,7 @@ Phenotype data is large in both size and number of files, and stored in differen
 3. **Excluded rows with non-standard number of fields**: some rows may have additional/fewer separators either intentionally or erroneously creating additional/deleting fields.  `QUANT_PY` rejects any lines with a non-standard number of separators.
 4. **Strip double-quote**: This can be applied to non comma-delimited data files.  In some such files, double-quotes can appear singly ("), doubly ("") or even triply (""")
 
-Processed files are listed in [Appendix A](#Appendix_A__--_List_of_processed_phenotype_files).
+Processed files are listed in [Appendix A](#appendix-a-list-of-processed-phenotype-files).
 
 #### Intermediary `.arrow` files
 These can be useful for debugging purposes or for researchers interested in phenotypic data from a specific source.
@@ -267,7 +267,10 @@ Use `MegaLinkage file`$trade; to link to Stage 1 questionnaire data found in `/l
 Results obtained prior to 16 years of age are also excluded.
 
 #### Filter to within-range values
-Only rows with a `range_position` (as defined in [STEP 4](#STEP_4_Perform_unit_conversions_and_flag_outofrange_COMBO_results) equal to `ok` (cf. `below_min` and `above_max`) are kept.
+Only rows with a `range_position` (as defined in [STEP 4](#step-4-perform-unit-conversions-and-flag-out-of-range-combo-results) equal to `ok` (cf. `below_min` and `above_max`) are kept.
+
+STEP 4: Perform unit conversions and flag out-of-range **COMBO** results
+
 
 ### STEP 6: Window data in 10-day windows
 Because the same quantitative result can come from multiple sources with a similar but non-identical date (e.g. a secondary care result is registered in an individual's primary care record with the date it was received in primary care rather than the actual test result date), the quantitative data are "windowed".
