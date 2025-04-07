@@ -259,15 +259,15 @@ Possible reasons:
 
 1. subject asked to be removed/withdrawn
 2. subject died
-3. subject had multiple pseudoNHS which have been merged
+3. subject had multiple pseudoNHSnumbers which have been merged
 
 #### Filter to valid demographics
-Use `MegaLinkage file`$trade; to link to Stage 1 questionnaire data found in `/library-red/genesandhealth/phenotype_raw_data/QMUL__Stage1Questionnaire`.  This gives patient MONTH/YEAR of birth.  All volunteers are assumed to be born on the first day of a month.  Results are excluded if age at test is not greater or equal to zero (i.e. result before birth of volunteer) or the result is dated beyond the date of the run execution (i.e. results dated to the future).
+Use `MegaLinkage file`$trade; to link to Stage 1 questionnaire data found in `/library-red/genesandhealth/phenotype_raw_data/QMUL__Stage1Questionnaire`.  This gives patient MONTH/YEAR of birth.  All volunteers are assumed to be born on the first day of a month.  Results are excluded if age at test is less than or equal to zero (i.e. result before birth of volunteer), or the result is dated beyond the date of the run execution (i.e. results dated to the future).
 
 Results obtained prior to 16 years of age are also excluded.
 
 #### Filter to within-range values
-Only rows with a `range_position` equal to `ok` (cf. `below_min` and `above_max`) are kept.
+Only rows with a `range_position` (as defined in [STEP 4](#STEP_4_Perform_unit_conversions_and_flag_outofrange_COMBO_results) equal to `ok` (cf. `below_min` and `above_max`) are kept.
 
 ### STEP 6: Window data in 10-day windows
 Because the same quantitative result can come from multiple sources with a similar but non-identical date (e.g. a secondary care result is registered in an individual's primary care record with the date it was received in primary care rather than the actual test result date), the quantitative data are "windowed".
