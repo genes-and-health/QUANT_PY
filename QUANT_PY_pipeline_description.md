@@ -267,15 +267,12 @@ Use `MegaLinkage file`$trade; to link to Stage 1 questionnaire data found in `/l
 Results obtained prior to 16 years of age are also excluded.
 
 #### Filter to within-range values
-Only rows with a `range_position` (as defined in [STEP 4](#step-4-perform-unit-conversions-and-flag-out-of-range-combo-results) equal to `ok` (cf. `below_min` and `above_max`) are kept.
-
-STEP 4: Perform unit conversions and flag out-of-range **COMBO** results
-
+Only rows with a `range_position` (as defined in [STEP 4](#step-4-perform-unit-conversions-and-flag-out-of-range-combo-results)) equal to `ok` (cf. `below_min` and `above_max`) are kept.
 
 ### STEP 6: Window data in 10-day windows
 Because the same quantitative result can come from multiple sources with a similar but non-identical date (e.g. a secondary care result is registered in an individual's primary care record with the date it was received in primary care rather than the actual test result date), the quantitative data are "windowed".
 
-Non-overlapping 10-day windows are applied and any identical test results within this window are deduplicated even if the result dates differ.  The earliest instance of the result is kept.
+Non-overlapping 10-day windows are applied and any identical test results within these windows are deduplicated even if the result dates differ.  The earliest instance of the result is kept.
 
 ### STEP 7: Generate output files
 These can all be found in the **`.../outputs/`** directory
