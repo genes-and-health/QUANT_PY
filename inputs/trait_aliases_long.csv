@@ -1,1 +1,1191 @@
-
+trait,alias
+2h_postprandial_glucose,2h_postprandial_glucose
+2h_postprandial_glucose,Plasma 2 hours post-prandial glucose level
+2h_postprandial_glucose,"Glucose measurement, 2 hour post prandial (procedure)"
+2h_postprandial_glucose,Serum 2-hr post-prandial glucose level
+2h_postprandial_glucose,Serum 2 hours post-prandial glucose level
+2h_postprandial_glucose,2 hour post-prandial blood glucose level
+2h_postprandial_glucose,Plasma 2 hours post-prandial glucose level (observable entity)
+2h_postprandial_glucose,Plasma 2-hr post-prandial glucose level
+2h_postprandial_glucose,"Glucose measurement, 2 hour post prandial"
+2h_postprandial_glucose,Serum 2 hours post-prandial glucose level (observable entity)
+2h_postprandial_glucose,2 hour post-prandial blood glucose level (observable entity)
+AFP,AFP
+AFP,Alphafetoprotein Serum
+AFP,Serum alpha foetoprotein level
+AFP,Serum alpha foetoprotein level (observable entity)
+ALP,ALP
+ALP,Alkaline Phosphatase Serum
+ALP,Alkaline phosphatase level
+ALP,Serum alkaline phosphatase
+ALP,Serum alkaline phosphatase level
+ALP,Serum alkaline phosphatase level (observable entity)
+ALT,ALT
+ALT,ALT/SGPT serum level
+ALT,Alanine Aminotransferase Serum
+ALT,Alanine aminotransferase level
+ALT,Plasma alanine aminotransferase level
+ALT,Plasma alanine aminotransferase level (observable entity)
+ALT,Serum alanine aminotransferase level
+ALT,Serum alanine aminotransferase level (observable entity)
+APTT,APTT
+APTT,Activated Partial Thromboplastin Time
+APTT,Activated partial thromboplastin time
+APTT,Activated partial thromboplastin time (observable entity)
+AST,AST
+AST,AST serum level
+AST,Aspartate Aminotransferase Serum
+AST,Aspartate aminotransferase level
+AST,Aspartate aminotransferase level (observable entity)
+AST,Serum aspartate aminotransferase level
+AST,Serum aspartate aminotransferase level (observable entity)
+Albumin,Albumin
+Albumin,Albumin Serum
+Albumin,Albumin level
+Albumin,Plasma albumin level
+Albumin,Plasma albumin level (observable entity)
+Albumin,Serum albumin
+Albumin,Serum albumin level
+Albumin,Serum albumin level (observable entity)
+Alcohol_units_per_week,Alcohol_units_per_week
+Alcohol_units_per_week,alcohol units/week (qualifier value)
+Alcohol_units_per_week,alcohol units/week
+Alcohol_units_per_week,alcohol units/day {Ub172}
+Alcohol_units_per_week,alcohol units/day (qualifier value)
+Alcohol_units_per_week,alcohol units/day
+Alcohol_units_per_week,Non drinker alcohol
+Alcohol_units_per_week,Current non-drinker of alcohol (finding)
+Alcohol_units_per_week,Alcoholic beverage intake (observable entity)
+Alcohol_units_per_week,Alcoholic beverage intake
+Alcohol_units_per_week,Alcohol use disorder identificatn test consumptn questionnre
+Alcohol_units_per_week,Alcohol use disorder identification test consumption questionnaire (assessment scale)
+Alcohol_units_per_week,Alcohol units per week {Ub173}
+Alcohol_units_per_week,Alcohol units per week
+Alcohol_units_per_week,Alcohol units consumed per week (observable entity)
+Alcohol_units_per_week,Alcohol units consumed per week
+Alcohol_units_per_week,Alcohol units consumed per day (observable entity)
+Alcohol_units_per_week,Alcohol units consumed per day
+Alcohol_units_per_week,Alcohol screen using alcohol use disorder identification test consumption questions completed (situation)
+Alcohol_units_per_week,Alcohol screen - alcohol use disorder identification test consumption questions completed
+Alcohol_units_per_week,Alcohol screen - AUDIT C completed
+Alcohol_units_per_week,Alcohol intake (observable entity)
+Alcohol_units_per_week,Alcohol intake
+Alcohol_units_per_week,Alcohol consumption NOS
+Alcohol_units_per_week,Alcohol consumption
+Alcohol_units_per_week,Alcohol Use Disorders Identification Test - Consumption score (observable entity)
+Alcohol_units_per_week,AUDIT-C (Alcohol Use Disorders Identification Test - Consumption) score
+Amylase,Amylase
+Amylase,Amylase Serum
+Amylase,Plasma amylase level
+Amylase,Plasma amylase level (observable entity)
+Amylase,Serum amylase level
+Amylase,Serum amylase level (observable entity)
+Birth_weight,Birth_weight
+Birth_weight,Child's Birth Weight (g)
+Birth_weight,Birthweight of baby NOS
+Birth_weight,Birthweight of baby
+Birth_weight,Birthweight
+Birth_weight,Birth weight finding (finding)
+Birth_weight,Birth weight finding
+Birth_weight,Birth weight (observable entity)
+Birth_weight,Birth weight
+Birth_weight,Birth Weight:
+Birth_weight,Birth Weight (g)
+Birth_weight,(M) Birth Weight
+BMI,BMI
+BMI,Body Mass Index
+BMI,Body Mass Index Measured
+BMI,Body mass index
+BMI,Body mass index (observable entity)
+BMI,Body mass index 20-24 - normal
+BMI,Body mass index 20-24 - normal (finding)
+BMI,Body mass index 25-29 - overweight
+BMI,Body mass index 25-29 - overweight (finding)
+BMI,Body mass index 30+ - obesity
+BMI,Body mass index less than 20
+BMI,Body mass index less than 20 (finding)
+BMI,Finding of body mass index
+BMI,Finding of body mass index (finding)
+Basophils,Basophil Count
+Basophils,Basophil count
+Basophils,Basophil count (observable entity)
+Basophils,Basophil count normal
+Basophils,Basophil count normal (finding)
+Basophils,Basophil count within reference range
+Basophils,Basophil count within reference range (finding)
+Basophils,Basophils
+Basophils,basophil count
+Basophils,"Basophil count, blood"
+Bilirubin,Bilirubin
+Bilirubin,Finding of serum bilirubin level
+Bilirubin,Finding of serum bilirubin level (finding)
+Bilirubin,POCT Bilirubin
+Bilirubin,Plasma total bilirubin level
+Bilirubin,Plasma total bilirubin level (observable entity)
+Bilirubin,Serum bilirubin level
+Bilirubin,Serum bilirubin level (observable entity)
+Bilirubin,Serum total bilirubin level
+Bilirubin,Serum total bilirubin level (observable entity)
+Bilirubin,Total Bilirubin Serum
+Bilirubin,Total bilirubin
+Bilirubin,Total bilirubin level
+Bilirubin,Total bilirubin level (observable entity)
+Blood_ketones,Blood ketone level
+Blood_ketones,Blood ketone level (observable entity)
+Blood_ketones,Ketones (Blood)
+Blood_ketones,POCT Blood Ketones
+Blood_ketones,Serum ketone level (observable entity)
+C3,C3
+C3,Complement C3 Component
+C3,complement c3 component
+C4,C4
+C4,Complement C4 Component
+C4,complement c4 component
+CA125,CA 125
+CA125,CA125
+CA125,Ca 125
+CA125,Serum cancer antigen 125 level (observable entity)
+CA125,serum cancer antigen 125 level
+CCP_antibody,CCP Antibody
+CCP_antibody,CCP_antibody
+CCP_antibody,ccp antibody
+CK,CK
+CK,Creatine Kinase Serum
+CK,Serum creatine kinase level
+CK,Serum creatine kinase level (observable entity)
+CK,creatine kinase serum
+CRP,C-Reactive Protein Serum
+CRP,C-reactive protein level
+CRP,C-reactive protein normal
+CRP,C-reactive protein normal (finding)
+CRP,CRP
+CRP,Plasma C reactive protein
+CRP,Plasma C reactive protein (observable entity)
+CRP,Serum C reactive protein level
+CRP,Serum C reactive protein level (observable entity)
+CRP,Serum CRP (C reactive protein) level
+Calcium,Adjusted Calcium Serum
+Calcium,Adjusted calcium level
+Calcium,Blood calcium level
+Calcium,Blood calcium level (observable entity)
+Calcium,Blood ionised calcium level
+Calcium,Blood ionised calcium level (observable entity)
+Calcium,Calcium
+Calcium,Calcium Serum
+Calcium,Calcium adjusted level
+Calcium,Calcium adjusted level (observable entity)
+Calcium,Corrected measurement of calcium (procedure)
+Calcium,Corrected serum calcium level
+Calcium,Ionised calcium level POCT
+Calcium,Plasma adjusted calcium concentration
+Calcium,Plasma adjusted calcium concentration (observable entity)
+Calcium,Plasma calcium level
+Calcium,Plasma calcium level (observable entity)
+Calcium,Serum adjusted calcium concentration
+Calcium,Serum adjusted calcium concentration (observable entity)
+Calcium,Serum calcium
+Calcium,Serum calcium level
+Calcium,Serum calcium level (observable entity)
+Calcium,Serum ionised calcium level
+Calcium,Serum ionised calcium level (observable entity)
+Diastolic_BP,24 hour diastolic blood pressure
+Diastolic_BP,24 hour diastolic blood pressure (observable entity)
+Diastolic_BP,Ambulatory diastolic blood pressure
+Diastolic_BP,Ambulatory diastolic blood pressure (observable entity)
+Diastolic_BP,Average 24 hour diastolic blood
+Diastolic_BP,Average day interval diastolic blood pressure
+Diastolic_BP,Average day interval diastolic blood pressure (observable entity)
+Diastolic_BP,Average diastolic blood pressure
+Diastolic_BP,Average diastolic blood pressure (observable entity)
+Diastolic_BP,Average home diastolic blood pressure
+Diastolic_BP,Average home diastolic blood pressure (observable entity)
+Diastolic_BP,Average night interval diastolic blood pressure
+Diastolic_BP,Average night interval diastolic blood pressure (observable entity)
+Diastolic_BP,Diastolic Blood Pressure
+Diastolic_BP,Diastolic arterial pressure
+Diastolic_BP,Diastolic arterial pressure (observable entity)
+Diastolic_BP,Diastolic blood pressure
+Diastolic_BP,Diastolic blood pressure (observable entity)
+Diastolic_BP,Diastolic_BP
+Diastolic_BP,Lying Diastolic Blood Pressure
+Diastolic_BP,Lying diastolic blood pressure
+Diastolic_BP,Lying diastolic blood pressure (observable entity)
+Diastolic_BP,On examination - Diastolic blood pressure reading (finding)
+Diastolic_BP,Self reported diastolic blood pressure
+Diastolic_BP,Self reported diastolic blood pressure (observable entity)
+Diastolic_BP,Sitting diastolic blood pressure
+Diastolic_BP,Sitting diastolic blood pressure (observable entity)
+Diastolic_BP,Standing diastolic blood pressure
+Diastolic_BP,Standing diastolic blood pressure (observable entity)
+Diastolic_BP,on examination - diastolic blood pressure reading
+ESR,ESR
+ESR,ESR - erythrocyte sedimentation rate
+ESR,Erythrocyte Sedimentation Rate
+ESR,Erythrocyte sedimentation rate
+ESR,Erythrocyte sedimentation rate (observable entity)
+ESR,Erythrocyte sedimentation rate abnormal
+ESR,Erythrocyte sedimentation rate abnormal (finding)
+ESR,Erythrocyte sedimentation rate above reference range
+ESR,Erythrocyte sedimentation rate above reference range (finding)
+ESR,Erythrocyte sedimentation rate normal
+ESR,Erythrocyte sedimentation rate normal (finding)
+ESR,Erythrocyte sedimentation rate outside reference range
+ESR,Erythrocyte sedimentation rate outside reference range (finding)
+ESR,Erythrocyte sedimentation rate raised
+ESR,Erythrocyte sedimentation rate raised (finding)
+ESR,Erythrocyte sedimentation rate within reference range
+ESR,Erythrocyte sedimentation rate within reference range (finding)
+ESR,Esr
+Eosinophils,Eosinophil Count
+Eosinophils,Eosinophil count
+Eosinophils,Eosinophil count (observable entity)
+Eosinophils,Eosinophil count normal
+Eosinophils,Eosinophil count normal (finding)
+Eosinophils,Eosinophil count within reference range
+Eosinophils,Eosinophil count within reference range (finding)
+Eosinophils,Eosinophils
+Eosinophils,"Eosinophil count, blood"
+FEV1,Expected FEV1
+FEV1,Expected forced expired volume in 1 second
+FEV1,Expected forced expired volume in 1 second (observable entity)
+FEV1,FEV1
+FEV1,Forced expired volume in 1 second
+FEV1,Forced expired volume in 1 second (observable entity)
+FEV1,Forced expired volume in 1 second after bronchodilation
+FEV1,Forced expired volume in 1 second after bronchodilation (observable entity)
+FEV1,Forced expired volume in 1 second before bronchodilation
+FEV1,Forced expired volume in 1 second before bronchodilation (observable entity)
+FEV1,Forced expired volume in 1 second post steroids
+FEV1,Forced expired volume in 1 second post steroids (observable entity)
+FEV1,Forced expired volume in 1 second pre steroids
+FEV1,Forced expired volume in 1 second pre steroids (observable entity)
+FSH,FSH
+FSH,Follicle Stimulating Hormone Serum
+FSH,Serum FSH (follicle stimulating hormone) level
+FSH,Serum FSH level
+FSH,Serum follicle stimulating hormone level
+FSH,Serum follicle stimulating hormone level (observable entity)
+Glucose_fasting,Fasting Glucose Plasma
+Glucose_fasting,Fasting Plasma Glucose level
+Glucose_fasting,Fasting blood glucose level
+Glucose_fasting,Fasting blood glucose level (observable entity)
+Glucose_fasting,Fasting blood sugar
+Glucose_fasting,Glucose_fasting
+Glucose_fasting,Plasma fasting glucose level
+Glucose_fasting,Plasma fasting glucose level (observable entity)
+Glucose_fasting,Serum fasting glucose level
+Glucose_fasting,Serum fasting glucose level (observable entity)
+Ferritin,Ferritin
+Ferritin,Ferritin Serum
+Ferritin,Ferritin level below reference range
+Ferritin,Ferritin level below reference range (finding)
+Ferritin,Ferritin level low
+Ferritin,Ferritin level low (finding)
+Ferritin,Plasma ferritin level
+Ferritin,Plasma ferritin level (observable entity)
+Ferritin,Serum ferritin
+Ferritin,Serum ferritin level
+Ferritin,Serum ferritin level (observable entity)
+Ferritin,Serum ferritin normal
+Ferritin,Serum ferritin normal (finding)
+Ferritin,Serum ferritin within reference range
+Ferritin,Serum ferritin within reference range (finding)
+Folate,Folate
+Folate,Folate Serum
+Folate,Plasma folate level
+Folate,Plasma folate level (observable entity)
+Folate,Serum folate
+Folate,Serum folate below reference range
+Folate,Serum folate below reference range (finding)
+Folate,Serum folate level
+Folate,Serum folate level (observable entity)
+Folate,Serum folate low
+Folate,Serum folate low (finding)
+Fructosamine,Fructosamine
+Fructosamine,Serum fructosamine level (observable entity)
+Fructosamine,Serum fructosamine level
+Fructosamine,Serum fructosamine
+Fructosamine,"Fructosamine level, blood"
+Fructosamine,Fructosamine level (observable entity)
+Fructosamine,Fructosamine level
+Fructosamine,Fructosamine Serum
+Fructosamine,Corrected fructosamine measurement (procedure)
+Fructosamine,Corrected fructosamine
+Fructosamine,Corrected Fructosamine
+GGT,GGT
+GGT,Gamma-glutamyl Transpeptidase Serum
+GGT,Gamma-glutamyl transferase level
+GGT,Gamma-glutamyl transferase level (observable entity)
+GGT,Gamma-glutamyl transferase level normal
+GGT,Gamma-glutamyl transferase level normal (finding)
+GGT,Gamma-glutamyl transferase level within reference range
+GGT,Gamma-glutamyl transferase level within reference range (finding)
+GGT,Plasma gamma-glutamyl transferase level
+GGT,Plasma gamma-glutamyl transferase level (observable entity)
+GGT,Serum GGT (gamma-glutamyl transferase) level
+GGT,Serum gamma-glutamyl transferase level
+GGT,Serum gamma-glutamyl transferase level (observable entity)
+Glucose_non_fasting,120 minute blood glucose level
+Glucose_non_fasting,120 minute blood glucose level (observable entity)
+Glucose_non_fasting,120 minute plasma glucose level
+Glucose_non_fasting,120 minute plasma glucose level (observable entity)
+Glucose_non_fasting,120 minute serum glucose level
+Glucose_non_fasting,120 minute serum glucose level (observable entity)
+Glucose_non_fasting,2 hour post-prandial blood glucose level
+Glucose_non_fasting,2 hour post-prandial blood glucose level (observable entity)
+Glucose_non_fasting,60 minute plasma glucose level
+Glucose_non_fasting,60 minute plasma glucose level (observable entity)
+Glucose_non_fasting,Blood Glucose
+Glucose_non_fasting,"Blood Glucose, Capillary"
+Glucose_non_fasting,Blood glucose 10-13.9 mmol/L
+Glucose_non_fasting,Blood glucose 10-13.9 mmol/L (finding)
+Glucose_non_fasting,Blood glucose 5-6.9 mmol/L
+Glucose_non_fasting,Blood glucose 5-6.9 mmol/L (finding)
+Glucose_non_fasting,Blood glucose 7-9.9 mmol/L
+Glucose_non_fasting,Blood glucose 7-9.9 mmol/L (finding)
+Glucose_non_fasting,Blood glucose level
+Glucose_non_fasting,Blood glucose level (observable entity)
+Glucose_non_fasting,Blood glucose level after evening meal
+Glucose_non_fasting,Blood glucose level after evening meal (observable entity)
+Glucose_non_fasting,Blood glucose level at bedtime
+Glucose_non_fasting,Blood glucose level at bedtime (observable entity)
+Glucose_non_fasting,Blood glucose level before lunch
+Glucose_non_fasting,Blood glucose level before lunch (observable entity)
+Glucose_non_fasting,Blood glucose normal
+Glucose_non_fasting,Blood glucose normal (finding)
+Glucose_non_fasting,Blood glucose result
+Glucose_non_fasting,Glucose Plasma
+Glucose_non_fasting,Glucose_non_fasting
+Glucose_non_fasting,POCT Glucose
+Glucose_non_fasting,Plasma glucose level
+Glucose_non_fasting,Plasma glucose level (observable entity)
+Glucose_non_fasting,Post-prandial blood glucose concentration
+Glucose_non_fasting,Post-prandial blood glucose concentration (observable entity)
+Glucose_non_fasting,Random Plasma Glucose level
+Glucose_non_fasting,Random blood glucose level
+Glucose_non_fasting,Random blood glucose level (observable entity)
+Glucose_non_fasting,Random blood glucose measurement (procedure)
+Glucose_non_fasting,Random blood sugar
+Glucose_non_fasting,Random blood sugar normal
+Glucose_non_fasting,Random blood sugar normal (finding)
+Glucose_non_fasting,Serum glucose level
+Glucose_non_fasting,Serum glucose level (observable entity)
+Glucose_non_fasting,Serum random glucose level
+Glucose_non_fasting,Serum random glucose level (observable entity)
+Glucose_non_fasting,blood glucose
+Glucose_non_fasting,"blood glucose, capillary"
+HCG,HCG
+HCG,Human Chorionic Gonadotrophin
+HCG,Serum beta human chorionic gonadotrophin pregnancy test
+HCG,Serum beta human chorionic gonadotrophin pregnancy test (observable entity)
+HCG,Serum total human chorionic gonadotropin level
+HCG,Serum total human chorionic gonadotropin level (observable entity)
+HDL-C,HDL Cholesterol Serum
+HDL-C,HDL cholesterol level
+HDL-C,HDL-C
+HDL-C,Serum HDL cholesterol level
+HDL-C,Serum cholesterol/HDL ratio
+HDL-C,Serum high density lipoprotein cholesterol level
+HDL-C,Serum high density lipoprotein cholesterol level (observable entity)
+Haematocrit,HCT
+Haematocrit,Haemactocrit
+Haematocrit,Haematocrit
+Haematocrit,Haematocrit (observable entity)
+Haematocrit,Haematocrit level
+Haematocrit,Haematocrit – PCV
+Haematocrit,"Haematocrit, POCT,BTHFT"
+Haemoglobin_A2_percent,Haemoglobin A2
+Haemoglobin_A2_percent,Haemoglobin A2 level
+Haemoglobin_A2_percent,Haemoglobin A2 level (observable entity)
+Haemoglobin_A2_percent,Haemoglobin_A2_percent
+Haemoglobin_A2_percent,Red cell Haemoglobin A2 estimation
+Haemoglobin_A2_percent,Red cell Haemoglobin A2 estimation (observable entity)
+Haemoglobin_A2_percent,haemoglobin a2
+Haemoglobin_A2_percent,red cell haemoglobin a2 estimation
+Haemoglobin_A_percent,Haemoglobin A
+Haemoglobin_A_percent,Haemoglobin A level
+Haemoglobin_A_percent,Haemoglobin A level (observable entity)
+Haemoglobin_A_percent,Haemoglobin_A_percent
+Haemoglobin_A_percent,haemoglobin a
+Haemoglobin_A_percent,haemoglobin a level
+Haemoglobin_D_percent,Haemoglobin D level
+Haemoglobin_D_percent,Haemoglobin D level (observable entity)
+Haemoglobin_D_percent,Haemoglobin_D_percent
+Haemoglobin_D_percent,haemoglobin d level
+Haemoglobin_E_percent,Haemoglobin E level
+Haemoglobin_E_percent,Haemoglobin E level (observable entity)
+Haemoglobin_E_percent,Haemoglobin_E_percent
+Haemoglobin_E_percent,haemoglobin e level
+Haemoglobin_F_percent,Haemoglobin F
+Haemoglobin_F_percent,Haemoglobin F level
+Haemoglobin_F_percent,Haemoglobin F level (observable entity)
+Haemoglobin_F_percent,"Haemoglobin F level, blood"
+Haemoglobin_F_percent,Haemoglobin_F_percent
+Haemoglobin_F_percent,haemoglobin f
+Haemoglobin_F_percent,haemoglobin f level
+Hb,HB
+Hb,Haemoglobin
+Hb,Haemoglobin estimation
+Hb,Haemoglobin estimation (observable entity)
+Hb,Haemoglobin level
+Hb,Haemoglobin level estimation
+Hb,"Haemoglobin level, blood"
+Hb,Hb
+Hb,"Reduced haemoglobin level POCT, blood"
+Hb,"Total haemoglobin level, POCT,BTHFT"
+HbA1c,HbA1c
+HbA1c,Hemoglobin A1c target value using International Federation of Clinical Chemistry and Laboratory Medicine standardized method (observable entity)
+HbA1c,Hemoglobin A1C - diabetic control interpretation (observable entity)
+HbA1c,Hemoglobin A1C - diabetic control finding (finding)
+HbA1c,HbA1c target level - IFCC standardised
+HbA1c,HbA1c levl - IFCC standardised
+HbA1c,HbA1c level (monitoring ranges) - IFCC standardised
+HbA1c,HbA1c level (diagnostic reference range) - IFCC standardised
+HbA1c,HbA1c level (Diabetes Control and Complications Trial aligned)
+HbA1c,HbA1c level (DCCT aligned)
+HbA1c,HbA1c (haemoglobin A1c) target level - IFCC (International Federation of Clinical Chemistry and Laboratory Medicine) standardised
+HbA1c,HbA1c (haemoglobin A1c) level (monitoring ranges) - IFCC (International Federation of Clinical Chemistry and Laboratory Medicine) standardised
+HbA1c,HbA1c (haemoglobin A1c) level (diagnostic reference range) - IFCC (International Federation of Clinical Chemistry and Laboratory Medicine) standardised
+HbA1c,HbA1c (IFCC)
+HbA1c,Hb. A1C - diabetic control
+HbA1c,Haemoglobin A1c target value using International Federation of Clinical Chemistry and Laboratory Medicine standardised method
+HbA1c,Haemoglobin A1c level - International Federation of Clinical Chemistry and Laboratory Medicine standardised (observable entity)
+HbA1c,Haemoglobin A1c level - International Federation of Clinical Chemistry and Laboratory Medicine standardised
+HbA1c,Haemoglobin A1c level - IFCC standardised
+HbA1c,Haemoglobin A1c level (observable entity)
+HbA1c,Haemoglobin A1c level (monitoring ranges) - International Federation of Clinical Chemistry and Laboratory Medicine standardised (observable entity)
+HbA1c,Haemoglobin A1c level (diagnostic reference range) - International Federation of Clinical Chemistry and Laboratory Medicine standardised (observable entity)
+HbA1c,Haemoglobin A1c level (Diabetes Control and Complications Trial aligned) (observable entity)
+HbA1c,Haemoglobin A1c level
+HbA1c,"Haemoglobin A1c IFCC aligned, blood"
+HbA1c,Haemoglobin A1c IFCC
+HbA1c,Haemoglobin A1c DCCT Aligned
+HbA1c,Haemoglobin A1c (IFCC)
+HbA1c,Haemoglobin A1C - diabetic control interpretation
+HbA1c,Haemoglobin A1C - diabetic control finding
+HbA1c,HAEMOGLOBIN A1C
+Heart_Rate,Baseline heart rate
+Heart_Rate,Baseline heart rate (observable entity)
+Heart_Rate,Heart Rate Monitored
+Heart_Rate,Heart rate
+Heart_Rate,Heart rate (observable entity)
+Heart_Rate,Heart rate measured at systemic artery
+Heart_Rate,Heart rate measured at systemic artery (observable entity)
+Heart_Rate,Heart_Rate
+Heart_Rate,O/E - pulse rate
+Heart_Rate,On examination - pulse rate
+Heart_Rate,On examination - pulse rate (finding)
+Heart_Rate,On examination - pulse rate normal
+Heart_Rate,On examination - pulse rate normal (finding)
+Heart_Rate,On examination - pulse rate tachycardia
+Heart_Rate,On examination - pulse rate tachycardia (finding)
+Heart_Rate,Peripheral Pulse Rate
+Heart_Rate,Pulse Rate
+Heart_Rate,Pulse rate
+Heart_Rate,Radial pulse rate
+Heart_Rate,Radial pulse rate (observable entity)
+Heart_Rate,Resting heart rate
+Heart_Rate,Resting heart rate (observable entity)
+Heart_Rate,heart rate monitored
+Heart_Rate,on examination - pulse rate
+Heart_Rate,peripheral pulse rate
+Height,Body height
+Height,Body height (observable entity)
+Height,Body height measure
+Height,Body height measure (observable entity)
+Height,General finding of height
+Height,Height
+Height,Height/Length Measured
+Height,Measuring height of patient
+Height,O/E - height
+Height,On examination - height
+Height,On examination - height (finding)
+Height,Self reported body height
+Height,Self reported body height (observable entity)
+Height,Standing height
+Height,Standing height (observable entity)
+Height,on examination - height
+IgA,IgA
+IgA,Immunoglobulin A
+IgA,Immunoglobulin A (observable entity)
+IgG,IgG
+IgG,Immunoglobulin G
+IgG,Immunoglobulin G (observable entity)
+IgM,IgM
+IgM,Immunoglobulin M
+IgM,Immunoglobulin M (observable entity)
+Insulin_IgG,Insulin_IgG
+Insulin_IgG,IgG Insulin autoantibodies
+Insulin_IgG,Insulin IgG Antibody
+Insulin_IgG,Insulin IgG antibody level
+Insulin_IgG,Insulin immunoglobulin G antibody level
+Insulin_IgG,Insulin immunoglobulin G antibody level (observable entity)
+Iron_saturation,Iron_saturation
+Iron_saturation,Percentage Iron Saturation
+Iron_saturation,Percentage iron saturation
+Iron_saturation,Percentage iron saturation (observable entity)
+LDL-C,Calculated LDL (low density lipoprotein) cholesterol level
+LDL-C,Calculated LDL cholesterol level
+LDL-C,LDL Cholesterol
+LDL-C,LDL Cholesterol Level
+LDL-C,LDL Cholesterol Serum
+LDL-C,LDL cholesterol level
+LDL-C,LDL-C
+LDL-C,Ldl Cholesterol Level
+LDL-C,Plasma LDL (low density lipoprotein) cholesterol level
+LDL-C,Plasma LDL cholesterol level
+LDL-C,Plasma fasting LDL cholesterol level
+LDL-C,Plasma random LDL (low density lipoprotein) cholesterol level
+LDL-C,Plasma random LDL cholesterol level
+LDL-C,Serum LDL cholesterol level
+LDL-C,Serum fasting LDL (low density lipoprotein) cholesterol level
+LDL-C,Serum fasting LDL cholesterol level
+LDL-C,Serum low density lipoprotein cholesterol level
+LDL-C,Serum low density lipoprotein cholesterol level (observable entity)
+LDL-C,Serum random LDL (low density lipoprotein) cholesterol level
+LDL-C,Serum random LDL cholesterol level
+LDL-C,Total cholesterol:high density lipoprotein ratio
+LDL-C,Total cholesterol:high density lipoprotein ratio (observable entity)
+LH,LH
+LH,Luteinising Hormone Serum
+LH,Luteinising hormone level
+LH,Luteinising hormone level (observable entity)
+LH,Plasma luteinising hormone level
+LH,Plasma luteinising hormone level (observable entity)
+LH,Serum LH level
+LH,Serum luteinising hormone level
+LH,Serum luteinising hormone level (observable entity)
+Lipase,Lipase
+Lipase,Lipase Serum
+Lipase,Serum lipase level
+Lipase,Serum lipase level (observable entity)
+Lymphocytes,Lymphocyte Count
+Lymphocytes,Lymphocyte count
+Lymphocytes,Lymphocyte count (observable entity)
+Lymphocytes,Lymphocyte count normal
+Lymphocytes,Lymphocyte count normal (finding)
+Lymphocytes,Lymphocyte count within reference range
+Lymphocytes,Lymphocyte count within reference range (finding)
+Lymphocytes,Lymphocytes
+Lymphocytes,"Lymphocyte count, blood"
+Mean_Arterial_BP,Mean_Arterial_BP
+Mean_Arterial_BP,Mean Arterial Pressure
+Mean_Arterial_BP,"Mean Arterial Pressure, Invasive 1"
+Mean_Arterial_BP,Non-invasive mean arterial pressure (observable entity)
+Mean_Arterial_BP,Mean Arterial Pressure Invasive 2
+Mean_Arterial_BP,Non-invasive mean arterial pressure
+Mean_Arterial_BP,MAP - Mean arterial pressure
+Mean_Arterial_BP,"Mean Arterial Pressure, Cuff"
+MCH,MCH
+MCH,MCH - Mean corpuscular haemoglobin
+MCH,Mean Cell Haemoglobin
+MCH,Mean cell haemoglobin
+MCH,Mean cell haemoglobin level
+MCH,Mean corpusc. haemoglobin(MCH)
+MCH,Mean corpuscular haemoglobin
+MCH,Mean corpuscular haemoglobin (observable entity)
+MCH,"Mean cell haemoglobin level, blood"
+MCHC,MCHC
+MCHC,MCHC - Mean corpuscular haemoglobin concentration
+MCHC,Mean Cell Haemoglobin Concentration
+MCHC,Mean cell haemoglobin concentration
+MCHC,Mean corpusc. Hb. conc. (MCHC)
+MCHC,Mean corpuscular haemoglobin concentration
+MCHC,Mean corpuscular haemoglobin concentration (observable entity)
+MCHC,mchc - mean corpuscular haemoglobin concentration
+MCHC,mean cell haemoglobin concentration
+MCHC,mean corpusc. hb. conc. (mchc)
+MCHC,mean corpuscular haemoglobin concentration
+MCHC,"Mean cell haemoglobin conc, blood"
+MCV,MCV
+MCV,MCV - Mean corpuscular volume
+MCV,Mean Cell Volume
+MCV,Mean cell volume
+MCV,Mean corpuscular volume
+MCV,Mean corpuscular volume (MCV)
+MCV,Mean corpuscular volume (observable entity)
+MCV,Mean corpuscular volume - low
+MCV,Mean corpuscular volume - low (finding)
+MCV,Mean corpuscular volume - normal
+MCV,Mean corpuscular volume - normal (finding)
+MCV,Mean corpuscular volume below reference range
+MCV,Mean corpuscular volume below reference range (finding)
+MCV,Mean corpuscular volume within reference range
+MCV,Mean corpuscular volume within reference range (finding)
+MCV,"Mean cell volume, blood"
+MPO_antibody,MPO_antibody
+MPO_antibody,Myeloperoxidase (MPO) Antibody
+MPO_antibody,myeloperoxidase (mpo) antibody
+Mg,Blood magnesium level
+Mg,Blood magnesium level (observable entity)
+Mg,Magnesium
+Mg,Magnesium Serum
+Mg,Mg
+Mg,Plasma magnesium level
+Mg,Plasma magnesium level (observable entity)
+Mg,Serum magnesium level
+Mg,Serum magnesium level (observable entity)
+Mg,magnesium serum
+Monocytes,Monocyte Count
+Monocytes,Monocyte count
+Monocytes,Monocyte count (observable entity)
+Monocytes,Monocyte count normal
+Monocytes,Monocyte count normal (finding)
+Monocytes,Monocyte count within reference range
+Monocytes,Monocyte count within reference range (finding)
+Monocytes,Monocytes
+Monocytes,"Monocyte count, blood"
+Neutrophils,Neutrophil Count
+Neutrophils,Neutrophil count
+Neutrophils,Neutrophil count (observable entity)
+Neutrophils,Neutrophil count normal
+Neutrophils,Neutrophil count normal (finding)
+Neutrophils,Neutrophil count within reference range
+Neutrophils,Neutrophil count within reference range (finding)
+Neutrophils,Neutrophils
+Neutrophils,"Neutrophil count, blood"
+Non_HDL_cholesterol,Non HDL cholesterol level
+Non_HDL_cholesterol,Non high density lipoprotein cholesterol level
+Non_HDL_cholesterol,Non high density lipoprotein cholesterol level (observable entity)
+Non_HDL_cholesterol,Non-HDL Cholesterol
+Non_HDL_cholesterol,Non-HDL cholesterol
+Non_HDL_cholesterol,Non_HDL_cholesterol
+Non_HDL_cholesterol,Serum non high density lipoprotein cholesterol level
+Non_HDL_cholesterol,Serum non high density lipoprotein cholesterol level (observable entity)
+Nucleated_RBC_count,Nucleated_RBC_count
+Nucleated_RBC_count,"Nucleated red blood cell count, blood"
+Nucleated_RBC_count,Nucleated red blood cell count (observable entity)
+Nucleated_RBC_count,Nucleated red blood cell count
+Nucleated_RBC_count,Nucleated Red Blood Cell Count
+OGTT_120mins,OGTT_120mins
+OGTT_120mins,120 minute blood glucose level
+OGTT_120mins,120 minute blood glucose level (observable entity)
+OGTT_120mins,120 minute plasma glucose level
+OGTT_120mins,120 minute plasma glucose level (observable entity)
+OGTT_120mins,120 minute serum glucose level
+OGTT_120mins,120 minute serum glucose level (observable entity)
+PR3_antibody,PR3_antibody
+PR3_antibody,Proteinase 3 (PR3) Antibody
+PR3_antibody,proteinase 3 (pr3) antibody
+PSA,PROSTATE SPECIFIC ANTIGEN
+PSA,PSA
+PSA,PSA (prostate-specific antigen) level
+PSA,Prostate Specific Antigen
+PSA,Prostate specific antigen
+PSA,Prostate specific antigen level
+PSA,Prostate specific antigen level (observable entity)
+PSA,Prostate specific antigen normal
+PSA,Prostate specific antigen normal (finding)
+PSA,Prostate specific antigen within reference range
+PSA,Prostate specific antigen within reference range (finding)
+PSA,Serum PSA (prostate specific antigen) level
+PSA,Serum prostate specific antigen level
+PSA,Serum prostate specific antigen level (observable entity)
+PSA,Total PSA (prostate specific antigen) level
+PSA,Total prostate specific antigen level
+PSA,Total prostate specific antigen level (observable entity)
+PTH,PTH
+PTH,Parathyroid Hormone Plasma
+PTH,Serum parathyroid hormone level
+PTH,Serum parathyroid hormone level (observable entity)
+Phosphate,Blood inorganic phosphate level
+Phosphate,Blood inorganic phosphate level (observable entity)
+Phosphate,Inorganic Phosphate Serum
+Phosphate,Inorganic phosphate level
+Phosphate,Phosphate
+Phosphate,Plasma inorganic phosphate level
+Phosphate,Plasma inorganic phosphate level (observable entity)
+Phosphate,Serum inorganic phosphate
+Phosphate,Serum inorganic phosphate level
+Phosphate,Serum inorganic phosphate level (observable entity)
+Phosphate,Serum phosphate level normal
+Phosphate,Serum phosphate level normal (finding)
+Phosphate,Serum phosphate level within reference range
+Phosphate,Serum phosphate level within reference range (finding)
+Platelet_volume,Mean platelet volume
+Platelet_volume,Mean platelet volume (observable entity)
+Platelet_volume,Platelet_volume
+Platelets,Platelet count
+Platelets,Platelet count (observable entity)
+Platelets,Platelet count normal
+Platelets,Platelet count normal (finding)
+Platelets,Platelet count within reference range
+Platelets,Platelet count within reference range (finding)
+Platelets,"Platelet count, blood"
+Platelets,Platelets
+Prolactin,Plasma prolactin level
+Prolactin,Plasma prolactin level (observable entity)
+Prolactin,Prolactin
+Prolactin,Prolactin Serum
+Prolactin,Prolactin level
+Prolactin,Prolactin level (observable entity)
+Prolactin,Serum prolactin level
+Prolactin,Serum prolactin level (observable entity)
+Prothrombin_time,Prothrombin Time
+Prothrombin_time,Prothrombin time
+Prothrombin_time,Prothrombin time (observable entity)
+Prothrombin_time,Prothrombin time normal
+Prothrombin_time,Prothrombin time normal (finding)
+Prothrombin_time,Prothrombin_time
+Prothrombin_time,prothrombin time
+RBC,RBC
+RBC,Red Blood Count
+RBC,Red Cell Count
+RBC,Red blood cell (RBC) count
+RBC,Red blood cell count
+RBC,Red blood cell count (observable entity)
+RBC,Red blood cell count normal
+RBC,Red blood cell count normal (finding)
+RBC,Red blood cell count within reference range
+RBC,Red blood cell count within reference range (finding)
+RBC,"Red Cell Count, blood"
+RDW,RDW
+RDW,Rdw
+RDW,Red Blood Cell Distribution Width
+RDW,Red blood cell distribution width
+RDW,Red blood cell distribution width (observable entity)
+Reticulocytes,Reticulocyte Count
+Reticulocytes,Reticulocyte count
+Reticulocytes,Reticulocyte count (observable entity)
+Reticulocytes,Reticulocytes
+Rheumatoid_factor,RHEUMATOID FACTOR
+Rheumatoid_factor,Rheumatoid Factor
+Rheumatoid_factor,Rheumatoid factor
+Rheumatoid_factor,Rheumatoid factor (observable entity)
+Rheumatoid_factor,Rheumatoid_factor
+Rheumatoid_factor,rheumatoid factor
+Serum_Cl,Chloride Serum
+Serum_Cl,POCT Chloride
+Serum_Cl,Serum chloride
+Serum_Cl,Serum chloride level
+Serum_Cl,Serum chloride level (observable entity)
+Serum_Cl,Serum_Cl
+Serum_K,Blood potassium level
+Serum_K,Blood potassium level (observable entity)
+Serum_K,Normal serum potassium level
+Serum_K,Normal serum potassium level (finding)
+Serum_K,POCT Potassium
+Serum_K,Plasma potassium level
+Serum_K,Plasma potassium level (observable entity)
+Serum_K,Potassium Serum
+Serum_K,Potassium level
+Serum_K,Potassium level (observable entity)
+Serum_K,Potassium level POCT
+Serum_K,Serum potassium
+Serum_K,Serum potassium level
+Serum_K,Serum potassium level (observable entity)
+Serum_K,Serum potassium level within reference range
+Serum_K,Serum potassium level within reference range (finding)
+Serum_K,Serum_K
+Serum_Na,Blood sodium level
+Serum_Na,Blood sodium level (observable entity)
+Serum_Na,POCT Sodium
+Serum_Na,Plasma sodium level
+Serum_Na,Plasma sodium level (observable entity)
+Serum_Na,Serum sodium
+Serum_Na,Serum sodium level
+Serum_Na,Serum sodium level (observable entity)
+Serum_Na,Serum sodium level normal
+Serum_Na,Serum sodium level normal (finding)
+Serum_Na,Serum sodium level within reference range
+Serum_Na,Serum sodium level within reference range (finding)
+Serum_Na,Serum_Na
+Serum_Na,Sodium Serum
+Serum_Na,Sodium level
+Serum_Na,Sodium level (observable entity)
+Serum_Na,Sodium level POCT
+Serum_alpha1_antitrysin,Alpha-1 Antitrypsin Serum
+Serum_alpha1_antitrysin,Serum_alpha1_antitrysin
+Serum_alpha1_antitrysin,alpha-1 antitrypsin serum
+Serum_bile_acids,Bile Acid Serum
+Serum_bile_acids,Bile acids level
+Serum_bile_acids,Serum_bile_acids
+Serum_bile_acids,bile acid serum
+Serum_bile_acids,bile acids level
+Serum_caeruloplasmin,Caeruloplasmin Serum
+Serum_caeruloplasmin,Serum_caeruloplasmin
+Serum_caeruloplasmin,caeruloplasmin serum
+Serum_iron,Iron Serum
+Serum_iron,Serum iron level
+Serum_iron,Serum iron level (observable entity)
+Serum_iron,Serum_iron
+Serum_iron,iron serum
+Serum_iron,serum iron level
+Sex_hormone_binding_globulin,Serum sex hormone binding globulin level
+Sex_hormone_binding_globulin,Serum sex hormone binding globulin level (observable entity)
+Sex_hormone_binding_globulin,Sex Hormone Binding Globulin Serum
+Sex_hormone_binding_globulin,Sex_hormone_binding_globulin
+Sex_hormone_binding_globulin,serum sex hormone binding globulin level
+Sex_hormone_binding_globulin,sex hormone binding globulin serum
+Systolic_BP,24 hour systolic blood pressure
+Systolic_BP,24 hour systolic blood pressure (observable entity)
+Systolic_BP,Ambulatory systolic blood pressure
+Systolic_BP,Ambulatory systolic blood pressure (observable entity)
+Systolic_BP,Average 24 hour systolic blood pressure
+Systolic_BP,Average 24 hour systolic blood pressure (observable entity)
+Systolic_BP,Average day interval systolic blood pressure
+Systolic_BP,Average day interval systolic blood pressure (observable entity)
+Systolic_BP,Average home systolic blood pressure
+Systolic_BP,Average home systolic blood pressure (observable entity)
+Systolic_BP,Average night interval systolic blood pressure
+Systolic_BP,Average night interval systolic blood pressure (observable entity)
+Systolic_BP,Average systolic blood pressure
+Systolic_BP,Average systolic blood pressure (observable entity)
+Systolic_BP,Baseline systolic blood pressure
+Systolic_BP,Baseline systolic blood pressure (observable entity)
+Systolic_BP,Lying Systolic Blood Pressure
+Systolic_BP,Lying systolic blood pressure
+Systolic_BP,Lying systolic blood pressure (observable entity)
+Systolic_BP,On examination - Systolic blood pressure reading
+Systolic_BP,On examination - Systolic blood pressure reading (finding)
+Systolic_BP,Self reported systolic blood pressure
+Systolic_BP,Self reported systolic blood pressure (observable entity)
+Systolic_BP,Sitting systolic blood pressure
+Systolic_BP,Sitting systolic blood pressure (observable entity)
+Systolic_BP,Standing systolic blood pressure
+Systolic_BP,Standing systolic blood pressure (observable entity)
+Systolic_BP,Systolic Blood Pressure
+Systolic_BP,Systolic arterial pressure
+Systolic_BP,Systolic arterial pressure (observable entity)
+Systolic_BP,Systolic blood pressure
+Systolic_BP,Systolic blood pressure (observable entity)
+Systolic_BP,Systolic_BP
+Systolic_BP,on examination - systolic blood pressure reading
+T4_free,T4_free
+T4_free,Free T4 Serum
+T4_free,Plasma free T4 level
+T4_free,Plasma free T4 level (observable entity)
+T4_free,Serum free T4 level
+T4_free,Serum free T4 level (observable entity)
+T4_free,T4
+TSH,Plasma thyroid stimulating hormone level
+TSH,Plasma thyroid stimulating hormone level (observable entity)
+TSH,Serum TSH (thyroid stimulating hormone) level
+TSH,Serum TSH level
+TSH,Serum thyroid stimulating hormone level
+TSH,Serum thyroid stimulating hormone level (observable entity)
+TSH,Serum thyroid stimulating hormone level abnormal
+TSH,Serum thyroid stimulating hormone level abnormal (finding)
+TSH,Serum thyroid stimulating hormone level normal
+TSH,Serum thyroid stimulating hormone level normal (finding)
+TSH,Serum thyroid stimulating hormone level outside reference range
+TSH,Serum thyroid stimulating hormone level outside reference range (finding)
+TSH,Serum thyroid stimulating hormone level within reference range
+TSH,Serum thyroid stimulating hormone level within reference range (finding)
+TSH,TSH
+TSH,TSH (thyroid stimulating hormone) level
+TSH,TSH - thyroid stim. Hormone
+TSH,TSH - thyroid stim. hormone
+TSH,Thyroid Stimulating Hormone Serum
+TSH,Thyroid stimulating hormone level
+TSH,Thyroid stimulating hormone level (observable entity)
+TTG_IgA,TTG_IgA
+TTG_IgA,Tissue Transglutaminase IgA Antibody
+TTG_IgA,Tissue Transglutaminase Serum
+TTG_IgA,tissue transglutaminase iga antibody
+TTG_IgA,tissue transglutaminase serum
+Total_cholesterol,Cholesterol
+Total_cholesterol,Cholesterol Serum
+Total_cholesterol,Plasma total cholesterol level
+Total_cholesterol,Plasma total cholesterol level (observable entity)
+Total_cholesterol,Serum cholesterol
+Total_cholesterol,Serum cholesterol above reference range
+Total_cholesterol,Serum cholesterol above reference range (finding)
+Total_cholesterol,Serum cholesterol borderline
+Total_cholesterol,Serum cholesterol borderline (finding)
+Total_cholesterol,Serum cholesterol level
+Total_cholesterol,Serum cholesterol level (observable entity)
+Total_cholesterol,Serum cholesterol normal
+Total_cholesterol,Serum cholesterol normal (finding)
+Total_cholesterol,Serum cholesterol raised
+Total_cholesterol,Serum cholesterol raised (finding)
+Total_cholesterol,Serum cholesterol very high
+Total_cholesterol,Serum cholesterol very high (finding)
+Total_cholesterol,Serum cholesterol within reference range
+Total_cholesterol,Serum cholesterol within reference range (finding)
+Total_cholesterol,Serum fasting total cholesterol level
+Total_cholesterol,Serum fasting total cholesterol level (observable entity)
+Total_cholesterol,Serum total cholesterol level
+Total_cholesterol,Serum total cholesterol level (observable entity)
+Total_cholesterol,Total cholesterol level
+Total_cholesterol,Total cholesterol level (observable entity)
+Total_cholesterol,Total cholesterol measurement
+Total_cholesterol,Total_cholesterol
+Total_protein,Serum total protein
+Total_protein,Serum total protein (observable entity)
+Total_protein,Serum total protein normal
+Total_protein,Serum total protein normal (finding)
+Total_protein,Serum total protein within reference range
+Total_protein,Serum total protein within reference range (finding)
+Total_protein,Total Protein Serum
+Total_protein,Total_protein
+Triglycerides,Serum triglycerides
+Triglycerides,Serum triglycerides above reference range
+Triglycerides,Serum triglycerides above reference range (finding)
+Triglycerides,Serum triglycerides borderline
+Triglycerides,Serum triglycerides borderline (finding)
+Triglycerides,Serum triglycerides level
+Triglycerides,Serum triglycerides level (observable entity)
+Triglycerides,Serum triglycerides normal
+Triglycerides,Serum triglycerides normal (finding)
+Triglycerides,Serum triglycerides raised
+Triglycerides,Serum triglycerides raised (finding)
+Triglycerides,Serum triglycerides within reference range
+Triglycerides,Serum triglycerides within reference range (finding)
+Triglycerides,Triglycerides
+Triglycerides,Triglycerides Serum
+Urate,Blood urate level
+Urate,Blood urate level (observable entity)
+Urate,Plasma urate level
+Urate,Plasma urate level (observable entity)
+Urate,Serum urate level
+Urate,Serum urate level (observable entity)
+Urate,Urate
+Urate,Urate Serum
+Urea,Blood urea
+Urea,Blood urea (observable entity)
+Urea,Blood urea normal
+Urea,Blood urea normal (finding)
+Urea,Blood urea within reference range
+Urea,Blood urea within reference range (finding)
+Urea,Blood urea/renal function
+Urea,Blood urea/renal function (observable entity)
+Urea,Plasma urea level
+Urea,Plasma urea level (observable entity)
+Urea,Serum urea level
+Urea,Serum urea level (observable entity)
+Urea,Urea
+Urea,Urea Serum
+Urea,Urea level
+Urine_ACR,Urine_ACR
+Urine_ACR,Urine microalbumin:creatinine ratio
+Urine_ACR,Urine microalbumin/creatinine ratio (observable entity)
+Urine_ACR,Urine microalbumin/creatinine ratio
+Urine_ACR,Urine albumin:creatinine ratio (observable entity)
+Urine_ACR,Urine albumin:creatinine ratio
+Urine_ACR,Urine Microalbumin/Creatinine Ratio
+Urine_ACR,Urine Albumin:Creatinine Ratio
+Urine_ACR,"Albumin:creatinine ratio, urine"
+Urine_ACR,Albumin/creatinine ratio (observable entity)
+Urine_ACR,Albumin/creatinine ratio
+Urine_ACR,Albumin / creatinine ratio
+Urine_ACR,Urine Albumin Creatinine Ratio
+Urine_ACR,urine albumin:creatinine ratio
+Urine_PCR,Urine_PCR
+Urine_PCR,Urine protein/creatinine ratio (observable entity)
+Urine_PCR,Urine protein/creatinine ratio
+Urine_PCR,Urine protein/creatinine index (observable entity)
+Urine_PCR,Urine protein/creatinine index
+Urine_PCR,Urine Protein:Creatinine Ratio
+Urine_PCR,Random urine protein:creatinine ratio (observable entity)
+Urine_PCR,Random urine protein:creatinine ratio
+Urine_PCR,"Protein:creatinine ratio, urine"
+Urine_creatinine,Urine_creatinine
+Urine_creatinine,Urine creatinine level (observable entity)
+Urine_creatinine,Urine creatinine level
+Urine_creatinine,Urine creatinine
+Urine_creatinine,Urine Creatinine (Referral lab)
+Urine_creatinine,Urine Creatinine
+Urine_creatinine,"Creatinine level, urine"
+Urine_creatinine,"Creatinine level (referred), urine"
+Urine_protein,Urine_protein
+Urine_protein,Urine total protein (observable entity)
+Urine_protein,Urine total protein
+Urine_protein,Urine protein test (observable entity)
+Urine_protein,Urine protein test
+Urine_protein,Urine protein level (observable entity)
+Urine_protein,Urine protein level
+Urine_protein,Urine protein
+Urine_protein,Urine Protein
+Urine_protein,Random urine protein level (observable entity)
+Urine_protein,Random urine protein level
+Urine_protein,"Protein level, urine"
+Vitamin_A,Vitamin_A
+Vitamin_A,"Vitamin A level, blood"
+Vitamin_A,Vitamin A Serum
+Vitamin_A,Serum vitamin A level (observable entity)
+Vitamin_A,Serum vitamin A level
+Vitamin_A,Serum vitamin A
+#Vitamin_B1,Vitamin_B1
+#Vitamin_B1,Exclude at present only 54 values recorded
+#Vitamin_B6,Vitamin_B6
+#Vitamin_B6,Exclude at present only 8 values recorded
+Vitamin_B12,Vitamin_B12
+Vitamin_B12,"Vitamin B12 level, serum"
+Vitamin_B12,"Vitamin B12 level, blood"
+Vitamin_B12,Vitamin B12 level
+Vitamin_B12,Vitamin B12 Serum
+Vitamin_B12,Serum vitamin B12 within reference range (finding)
+Vitamin_B12,Serum vitamin B12 normal (finding)
+Vitamin_B12,Serum vitamin B12 normal
+Vitamin_B12,Serum vitamin B12 level (observable entity)
+Vitamin_B12,Serum vitamin B12 level
+Vitamin_B12,Serum vitamin B12
+Vitamin_B12,Plasma vitamin B12 level (observable entity)
+Vitamin_B12,Plasma vitamin B12 level
+Vitamin_B12,Finding of vitamin B12 level (finding)
+Vitamin_D2,Vitamin_D2
+Vitamin_D2,Vitamin D2 level (observable entity)
+Vitamin_D2,Vitamin D2 level
+Vitamin_D2,Vitamin D2 Serum
+Vitamin_D2,Serum vitamin D2 level (observable entity)
+Vitamin_D2,Serum vitamin D2 level
+Vitamin_D2,Serum 25-hydroxyvitamin D2 level
+Vitamin_D2,Serum 25-OH Vitamin D2
+Vitamin_D2,25-hydroxy Vitamin D2
+Vitamin_D2,25-Hydroxyvitamin D2 level (observable entity)
+Vitamin_D2,25-Hydroxyvitamin D2 level
+Vitamin_D2,25-HYDROXY VITAMIN D2
+Vitamin_D3,Vitamin_D3
+Vitamin_D3,Vitamin D3 level (observable entity)
+Vitamin_D3,Vitamin D3 level
+Vitamin_D3,Vitamin D3
+Vitamin_D3,Serum 25-OH Vitamin D3
+Vitamin_D3,Serum 25-Hydroxyvitamin D3 level (observable entity)
+Vitamin_D3,Serum 25-Hydroxyvitamin D3 level
+Vitamin_D3,Serum 25-Hydroxy vitamin D3 level
+Vitamin_D3,Plasma 25-hydroxyvitamin D3 level (observable entity)
+Vitamin_D3,Plasma 25-hydroxyvitamin D3 level
+Vitamin_D3,25-hydroxy Vitamin D3
+Vitamin_D3,25-Hydroxyvitamin D3 level (observable entity)
+Vitamin_D3,25-Hydroxyvitamin D3 level
+Vitamin_D3,25-Hydroxy vitamin D3 measurement (procedure)
+Vitamin_D3,25-Hydroxy Vitamin D3 Serum
+Vitamin_D3,25-HYDROXY VITAMIN D3
+#Vitamin_D3_1_25_OH,Vitamin_D3_1_25_OH
+#Vitamin_D3_1_25_OH,Exclude at present only 8 values recorded
+Vitamin_D_total,Vitamin_D_total
+Vitamin_D_total,"Vitamin D, 25-hydroxy measurement (procedure)"
+Vitamin_D_total,Vitamin D measurement (procedure)
+Vitamin_D_total,Vitamin D level
+Vitamin_D_total,Total Vitamin D
+Vitamin_D_total,Total 25-hydroxyvitamin D levl
+Vitamin_D_total,Total 25-hydroxyvitamin D level (observable entity)
+Vitamin_D_total,Total 25-hydroxyvitamin D level
+Vitamin_D_total,Total 25-OH Vitamin D
+Vitamin_D_total,Total 25-Hydroxy Vitamin D
+Vitamin_D_total,TOTAL 25-(OH)VITAMIN D
+Vitamin_D_total,Serum vitamin D level (observable entity)
+Vitamin_D_total,Serum vitamin D level
+Vitamin_D_total,Serum vitamin D
+Vitamin_D_total,Serum total 25-hydroxy vitamin D level {Xabo0}
+Vitamin_D_total,Serum total 25-hydroxy vitamin D level (observable entity)
+Vitamin_D_total,Serum total 25-hydroxy vitamin D level
+Vitamin_D_total,Combined total vitamin D2 and D3 level (observable entity)
+Vitamin_D_total,Combined total vitamin D2 and D3 level
+Vitamin_D_total,"25-hydroxy vitamin D level, blood"
+Vitamin_D_total,"25-OH vitamin D (TMS), total, serum"
+Vitamin_D_total,25-OH Vitamin D Serum
+Vitamin_D_total,25-OH VITAMIN D
+Vitamin_D_total,25-Hydroxyvitamin D level
+Vitamin_D_total,25-HYDROXY VITAMIN D
+Vitamin_D_total,25 OH Vitamin D
+WBC,Total white cell count
+WBC,Total white cell count (observable entity)
+WBC,WBC
+WBC,White Blood Count
+WBC,White blood cell count
+WBC,White blood count
+WBC,"White blood cell count, blood"
+Waist_circumference,Waist circumference
+Waist_circumference,Waist circumference (observable entity)
+Waist_circumference,Waist_circumference
+Weight,Baseline weight
+Weight,Baseline weight (observable entity)
+Weight,Body weight
+Weight,Body weight (observable entity)
+Weight,Body weight with shoes
+Weight,Body weight without shoes
+Weight,Current body weight
+Weight,Finding of measures of body weight
+Weight,General weight finding
+Weight,Measured body weight
+Weight,O/E - weight
+Weight,On examination - weight
+Weight,On examination - weight (finding)
+Weight,On examination - weight 10-20% over ideal
+Weight,On examination - weight 10-20% over ideal (finding)
+Weight,Self reported body weight
+Weight,Self reported body weight (observable entity)
+Weight,Weight
+Weight,Weight Measured
+Weight,Weight finding
+Weight,on examination - weight
+creatinine,Creatinine
+creatinine,Creatinine Serum
+creatinine,Creatinine level
+creatinine,Creatinine level (observable entity)
+creatinine,"Creatinine level, blood"
+creatinine,POCT Creatinine
+creatinine,Plasma creatinine level
+creatinine,Plasma creatinine level (observable entity)
+creatinine,Serum creatinine
+creatinine,Serum creatinine abnormal
+creatinine,Serum creatinine abnormal (finding)
+creatinine,Serum creatinine below reference range
+creatinine,Serum creatinine below reference range (finding)
+creatinine,Serum creatinine level
+creatinine,Serum creatinine level (observable entity)
+creatinine,Serum creatinine low
+creatinine,Serum creatinine low (finding)
+creatinine,Serum creatinine normal
+creatinine,Serum creatinine normal (finding)
+creatinine,Serum creatinine outside reference range
+creatinine,Serum creatinine outside reference range (finding)
+creatinine,Serum creatinine within reference range
+creatinine,Serum creatinine within reference range (finding)
+creatinine,creatinine
+dsDNA,dsDNA
+dsDNA,dsDNA ELISA
+dsDNA,dsdna elisa
+eGFR,eGFR
+eGFR,"Estimated GFR (CKD-EPI), blood"
+eGFR,"Estimated GFR, blood"
+eGFR,Estimated glomerular filtration rate using creatinine Chronic Kidney Disease Epidemiology Collaboration equation per 1.73 square metres
+eGFR,Estimated glomerular filtration rate using creatinine Chronic Kidney Disease Epidemiology Collaboration equation per 1.73 square metres (observable entity)
+eGFR,GFR (glomerular filtration rate) calculated by abbreviated Modification of Diet in Renal Disease Study Group calculation
+eGFR,GFR - glomerular filtration rate
+eGFR,GFR calculated abbreviated MDRD
+eGFR,Glomerular filtration rate
+eGFR,Glomerular filtration rate (observable entity)
+eGFR,Glomerular filtration rate calculated by abbreviated Modification of Diet in Renal Disease Study Group calculation
+eGFR,Glomerular filtration rate calculated by abbreviated Modification of Diet in Renal Disease Study Group calculation (observable entity)
+eGFR,Glomerular filtration rate calculated by abbreviated Modification of Diet in Renal Disease Study Group calculation adjusted for African American origin
+eGFR,Glomerular filtration rate calculated by abbreviated Modification of Diet in Renal Disease Study Group calculation adjusted for African American origin (observable entity)
+eGFR,eGFR (estimated glomerular filtration rate) using creatinine Chronic Kidney Disease Epidemiology Collaboration equation per 1.73 square metres
+eGFR,eGFR using creatinine (CKD-EPI) per 1.73 square metres
+eGFR,estimated GFR
+oestradiol,Oestradiol Serum
+oestradiol,Oestradiol level
+oestradiol,Plasma oestradiol level
+oestradiol,Plasma oestradiol level (observable entity)
+oestradiol,Serum oestradiol level
+oestradiol,Serum oestradiol level (observable entity)
+oestradiol,oestradiol
+progesterone,Progesterone Serum
+progesterone,Progesterone level
+progesterone,SERUM PROGESTERONE
+progesterone,Serum progesterone
+progesterone,Serum progesterone level
+progesterone,Serum progesterone level (observable entity)
+progesterone,progesterone
+testosterone,Plasma testosterone level
+testosterone,Plasma testosterone level (observable entity)
+testosterone,Serum testosterone
+testosterone,Serum testosterone level
+testosterone,Serum testosterone level (observable entity)
+testosterone,Serum testosterone level normal
+testosterone,Serum testosterone level normal (finding)
+testosterone,Serum testosterone level within reference range
+testosterone,Serum testosterone level within reference range (finding)
+testosterone,Testosterone
+testosterone,Testosterone Serum
+testosterone,Testosterone level
+testosterone,testosterone
+testosterone_free,testosterone_free
+testosterone_free,Calculated free testosterone
+testosterone_free,Calculated free testosterone (observable entity)
+testosterone_free,Free testosterone level
+testosterone_free,Free testosterone level (observable entity)
+testosterone_free,Serum free testosterone level
+testosterone_free,Serum free testosterone level (observable entity)
