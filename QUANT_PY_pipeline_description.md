@@ -165,7 +165,7 @@ On 2025-04-01, the **COMBO** `2025_04_Combined_all_sources.arrow` was `78,582,47
 
 #### Import HES data
 
-Admitted Patient Care episodes are extracted from HES data pulls of 2021-09, 2023-07, 2024-10, and 2025-03. HES APC data are imported, cleaned up and deduplicated.
+Admitted Patient Care (APC) episodes are extracted from HES data pulls of 2021-09, 2023-07, 2024-10, and 2025-03. HES APC data are imported, cleaned up and deduplicated.
 
 > [!TIP]
 > The output of the HES APC pulls merges and deduplication are in the **`.../data/combined_datasets/`** directory:
@@ -175,30 +175,32 @@ Admitted Patient Care episodes are extracted from HES data pulls of 2021-09, 202
 #### Flagging COMBO result dates
 
 The HES dataset is used to define three APC `region_types`:
-* APC: a date span for the APC
-* buffer_before: a date span of 14d prior to addmission date
-* buffer_after: a date span of 14d after discharge date
+* **APC**: a date span for the APC
+* **buffer_before**: a date span of 14d prior to addmission date
+* **buffer_after**: a date span of 14d after discharge date
 
-**COMBO** test results are flagged to none (`null`), or one or more of the above by joining the APC data to **COMBO**.  For example, a date may exists within and APC period (flagged as `["APC"]`), or within an APC and a buffer_before (for example if the date falls both within an APC and within the buffer_before of a subsequent APC; flagged as `["APC", "buffer_before"]`).
+**COMBO** test results are flagged to none (`null`) if they fall out of the above listed three region types, or to one or more of the region types, by joining the APC data to **COMBO**.  For example, a date may exist within an APC period (flagged as `["APC"]`), or within an APC and a buffer_before (for example if the date falls both within an APC and within the buffer_before of a subsequent APC; flagged as `["APC", "buffer_before"]`).
 
 By extension, test result dates can be classifed in one of 11 (some non-mutually exclusive) categories.
 
 <details>
    <summary>Test result data categories</summary>
    
-   1. **IN_APC_ONLY**: test results collected in an actual hospitalisation episode not overlapping with the buffer of another APC
-   2. **IN_APC_ANY**: test results collected in an actual hospitalisation episode (which may overlap another APC's 14d buffer)
-   3. **IN_BUFFER_BEFORE_ONLY**: test results collected within the 14d prior to a hospitalisation episode (not overlapping with another APC or another APC's buffer)
-   4. **IN_BUFFER_BEFORE_ANY**: test results collected within the 14d prior to a hospitalisation episode (may overlap with an APC)
-   5. **IN_BUFFER_AFTER_ONLY**: test results collected within the 14d following a hospitalisation episode (not overlapping with another APC or another APC's buffer)
-   6. **IN_BUFFER_AFTER_ANY**: test results collected within the 14d following a hospitalisation episode (may overlap with an APC)
-   7. **IN_BUFFERS_ONLY**: test results collected _either_ within the 14d prior to, or following, a hospitalisation episode _and_ not during the actual hospitalisation period
-   8. **IN_BUFFERS_ANY**: test results collected _either_ within the 14d prior to, or following, a hospitalisation episode (may overlap with one or more APCs)
-   9. **IN_TOTAL_EXCLUSION_ZONE**: test results collected within a period from 14 days prior to a hospitalisation episode to 14 days following a hospitalisation episode _including_ the hospitalisation period
-   10. **OUT_OF_APC**: test results collected outside of any APC hospitalisation episode
-   11.  **OUT_OF_TOTAL_EXCLUSION_ZONE**: test results collected outside of any buffered hospitalisation episode (hospitalisation episode + 14 days either side)   
+   1. **`IN_APC_ONLY`**: test results collected in an actual hospitalisation episode not overlapping with the buffer of another APC
+   2. **`IN_APC_ANY`**: test results collected in an actual hospitalisation episode (which may overlap another APC's 14d buffer)
+   3. **`IN_BUFFER_BEFORE_ONLY`**: test results collected within the 14d prior to a hospitalisation episode (not overlapping with another APC or another APC's buffer)
+   4. **`IN_BUFFER_BEFORE_ANY`**: test results collected within the 14d prior to a hospitalisation episode (may overlap with an APC)
+   5. **`IN_BUFFER_AFTER_ONLY`**: test results collected within the 14d following a hospitalisation episode (not overlapping with another APC or another APC's buffer)
+   6. **`IN_BUFFER_AFTER_ANY`**: test results collected within the 14d following a hospitalisation episode (may overlap with an APC)
+   7. **`IN_BUFFERS_ONLY`**: test results collected _either_ within the 14d prior to, or following, a hospitalisation episode _and_ not during the actual hospitalisation period
+   8. **`IN_BUFFERS_ANY`**: test results collected _either_ within the 14d prior to, or following, a hospitalisation episode (may overlap with one or more APCs)
+   9. **`IN_TOTAL_EXCLUSION_ZONE`**: test results collected within a period from 14 days prior to a hospitalisation episode to 14 days following a hospitalisation episode _including_ the hospitalisation period
+   10. **`OUT_OF_APC`**: test results collected outside of any APC hospitalisation episode
+   11.  **`OUT_OF_TOTAL_EXCLUSION_ZONE`**: test results collected outside of any buffered hospitalisation episode (hospitalisation episode + 14 days either side)   
 
 </details>
+
+In practice, only three possible date statuses are considered: "all" (all quantitative results), "out_hospital" (i.e. `OUT_OF_TOTAL_EXCLUSION_ZONE`) and "in_hospital" (i.e. `IN_TOTAL_EXCLUSION_ZONE`) 
 
 ### STEP 4: Perform unit conversions and flag out-of-range **COMBO** results
 
