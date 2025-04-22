@@ -1,1 +1,1 @@
-Superseded -- see README.md 
+Superseded -- see [README.md](#README.md).
