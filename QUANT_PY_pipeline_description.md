@@ -122,11 +122,18 @@ It is advisable to run the pipeline on a VM with lots of memory, typically an `n
 Phenotype data is large in both size and number of files, and stored in different directories at different directory depth.  Buffering issues affect processing of data directly from the `/library-red/` Google Cloud bucket.  It is therefore simpler to copy all phenotype file to the `ivm` running `QUANT_PY`.  This transfer can be effected within the pipeline by setting a pipeline flag.
 
 ### STEP 1: Import phenotype files with appropriate pre-processing
-`R` is very good at handling "raggedness" but in doing so, it makes assumptions.  This can lead to the "wrong" data ending in a column.  Python can also import .csv/.tsv/.tab files and make assumptions about the seprators/raggedness/column data type but in `QUANT_PY` this is intentionally and explicitly avoided.  This means that some files need to be pre-processed.  This take the form of one of the following pre-processing operations:
-1. **Commas in double-quotes stripping**: Exclude any row with double quoted text with one or more commas in in.  This excludes <2% of rows but means that the parsing behaviour is consistent and predictable.
-2. **Exclude "unterminated" double-quotes**: Some rows include a double-quote not paired with a second double-quote before the next separator.  In such cases, the importing functions often "glob" all text in subsequent rows until another double-quote is found.  Therefore, these rows are excluded.
-3. **Excluded rows with non-standard number of fields**: some rows may have additional/fewer separators either intentionally or erroneously creating additional/deleting fields.  `QUANT_PY` rejects any lines with a non-standard number of separators.
-4. **Strip double-quote**: This can be applied to non comma-delimited data files.  In some such files, double-quotes can appear singly ("), doubly ("") or even triply (""")
+`R` is very good at handling "raggedness" but in doing so, it makes assumptions.  This can lead to the "wrong" data ending in a column.  Python can also import .csv/.tsv/.tab files and make assumptions about the seprators/raggedness/column data type but in `QUANT_PY` this is intentionally and explicitly avoided.  This means that some files need to be pre-processed.  This take the form of one or more of the following pre-processing operations:
+
+<details>
+
+   <summary>Pre-processing operations</summary>
+   
+   1. **Commas in double-quotes stripping**: Exclude any row with double quoted text with one or more commas in in.  This excludes <2% of rows but means that the parsing behaviour is consistent and predictable.
+   2. **Exclude "unterminated" double-quotes**: Some rows include a double-quote not paired with a second double-quote before the next separator.  In such cases, the importing functions often "glob" all text in subsequent rows until another double-quote is found.  Therefore, these rows are excluded.
+   3. **Excluded rows with non-standard number of fields**: some rows may have additional/fewer separators either intentionally or erroneously creating additional/deleting fields.  `QUANT_PY` rejects any lines with a non-standard number of separators.
+   4. **Strip double-quote**: This can be applied to non comma-delimited data files.  In some such files, double-quotes can appear singly ("), doubly ("") or even triply (""")
+      
+</details>
 
 Processed files are listed in [Appendix A](#appendix-a-list-of-processed-phenotype-files).
 
