@@ -273,7 +273,7 @@ Possible reasons:
 3. subject had multiple pseudoNHSnumbers which have been merged
 
 #### Filter to valid demographics
-Use `MegaLinkage file`$trade; to link to Stage 1 questionnaire data found in `/library-red/genesandhealth/phenotype_raw_data/QMUL__Stage1Questionnaire`.  This gives patient MONTH/YEAR of birth.  All volunteers are assumed to be born on the first day of a month.  Results are excluded if age at test is less than or equal to zero (i.e. result before birth of volunteer), or the result is dated beyond the date of the run execution (i.e. results dated to the future).
+Use `MegaLinkage`&trade; file  to link to Stage 1 questionnaire data found in `/library-red/genesandhealth/phenotype_raw_data/QMUL__Stage1Questionnaire`.  This gives patient MONTH/YEAR of birth.  All volunteers are assumed to be born on the first day of a month.  Results are excluded if age at test is less than or equal to zero (i.e. result before birth of volunteer), or the result is dated beyond the date of the run execution (i.e. results dated to the future).
 
 Results obtained prior to 16 years of age are also excluded.
 
