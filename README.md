@@ -11,7 +11,11 @@ Based on the "Quantitive Traits processing pipeline Jan 2025 redo" `pipeline_jan
 
 ## Summary
 
-The Genes & Health (G&H) `QUANT_PY` pipeline extracts and processes quantitative data from G&H phenotype data.  It creates files and covariate files suitable for `regenie` \[G/Ex\]WAS analysis as well as generic files for each quantitative trait at a _per individual_ level (one row per individual summarising the individual's values for the trait) and a _per result_ level (one line per individual-result).  The pipeline processes HES data to identify admitted patient care (APC) episodes.  From this, three versions of the created files are generated: 1) All data, 2) Out of hospital data (without APC + a buffer), 3) In hospital data (within APC + a  buffer).
+The Genes & Health (G&H) `QUANT_PY` pipeline extracts and processes quantitative data from G&H phenotype data.  
+
+The pipeline identifies all primary and secondary care quantitative trait readings; harmonises units; removes duplicates (including serial readings within narrow windows); excludes outlier values above clinically curated reasonable upper and lower bounds; and presents individual and study-level mean, median, min and max values.
+
+It creates files and covariate files suitable for `regenie` \[G/Ex\]WAS analysis as well as generic files for each quantitative trait at a _per individual_ level (one row per individual summarising the individual's values for the trait) and a _per result_ level (one line per individual-result).  The pipeline processes HES data to identify admitted patient care (APC) episodes.  From this, three versions of the created files are generated: 1) All data, 2) Out of hospital data (without APC + a buffer), 3) In hospital data (within APC + a  buffer).
 
 ## Input data
 ### Trait files
