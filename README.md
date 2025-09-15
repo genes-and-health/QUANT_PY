@@ -1,6 +1,7 @@
 # `QUANT_PY` pipeline — Description
 
 <img src="GNH%20TD%20Logo.png" alt="G&H Team Data logo" width=25%>
+<img width="191" height="20" alt="image" src="https://github.com/user-attachments/assets/b179be1b-9d6d-4de3-8668-571135fe7d66" />
 
 ## Authors
 
