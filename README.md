@@ -1,4 +1,4 @@
-# `QUANT_PY` pipeline — a python pipeline for quantitative data extraction in Genes & Health
+# `QUANT_PY` — a python pipeline for quantitative data extraction in Genes & Health
 
 <img src="GNH%20TD%20Logo.png" alt="G&H Team Data logo" width=25%>
 <img width="191" height="20" alt="image" src="https://github.com/user-attachments/assets/b179be1b-9d6d-4de3-8668-571135fe7d66" />
