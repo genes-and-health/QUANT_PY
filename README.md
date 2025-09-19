@@ -3,12 +3,13 @@
 <img src="GNH%20TD%20Logo.png" alt="G&H Team Data logo" width=25%>
 <img width="191" height="20" alt="image" src="https://github.com/user-attachments/assets/b179be1b-9d6d-4de3-8668-571135fe7d66" />
 
-## Authors
+## Authors & Contributors
 
 * Stuart Rison
 * Mike Samuels
+* David van Heel
 
-Based on the "Quantitive Traits processing pipeline Jan 2025 redo" `pipeline_jan_2025.md` R-script written by Ben Jacobs with contributions from Saeed Bidi, Sarah Finer, Sam Hodgson, Stravoula Kanoni, Rohini Mathur, Caroline Morton, Daniel Stow, David van Heel, Julia Zollner.
+Based on the "Quantitive Traits processing pipeline Jan 2025 redo" `pipeline_jan_2025.md` R-script first coded-up by Ben Jacobs with contributions from Saeed Bidi, Sarah Finer, Sam Hodgson, Stravoula Kanoni, Rohini Mathur, Caroline Morton, Daniel Stow, David van Heel, Julia Zollner.
 
 ## Summary
 
